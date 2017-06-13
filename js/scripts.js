@@ -15,3 +15,8 @@ function project(title, image, link, description) {
 
 $(function() {
 })
+
+
+function switchCodeSampleView(codeSampleNumber) {
+  $()
+}
