@@ -19,6 +19,37 @@ header h1 {
   margin: 1em;
 }
 
+nav {
+
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+nav ul {
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+nav:hover ul {
+  display: block;
+}
+
+nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
 .slideshow {
   position: relative;
   background-color: lightgrey;

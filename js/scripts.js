@@ -1,5 +1,3 @@
-'use strict';
-
 function codeSample(title, image, description) {
   this.title = title;
   this.image = image;
@@ -13,10 +11,8 @@ function project(title, image, link, description) {
   this.description = description;
 }
 
-$(function() {
-})
-
-
-function switchCodeSampleView(codeSampleNumber) {
-  $()
-}
+$(document).ready(function() {
+  $('.icon-menu').mouseenter(function (){
+    $('nav ul').display = 'block';
+  });
+});
