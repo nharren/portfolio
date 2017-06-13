@@ -1,3 +1,10 @@
+header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: lightgrey;
+}
+
 header h1 {
   font-size: 2em;
   font-weight: bold;
@@ -10,6 +17,32 @@ header h1 {
   float: right;
   font-size: 2em;
   margin: 1em;
+}
+
+.slideshow {
+  position: relative;
+  background-color: lightgrey;
+  height: 15em;
+  top: 10em;
+}
+
+.dots {
+  position: absolute;
+  text-align: center;
+  height: 2em;
+  bottom: 2em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dot {
+  background-color: black;
+  display: inline-block;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  border-radius: 10px;
+  margin: 0.25em;
 }
 
 @font-face {
