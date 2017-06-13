@@ -1,0 +1,107 @@
+header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+  display: inline;
+  margin: 1em;
+}
+
+.icon-menu {
+  float: right;
+  font-size: 2em;
+  margin: 1em;
+}
+
+nav {
+
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+nav ul {
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+nav:hover ul {
+  display: block;
+}
+
+nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.slideshow {
+  position: relative;
+  background-color: lightgrey;
+  height: 15em;
+  top: 10em;
+}
+
+.dots {
+  position: absolute;
+  text-align: center;
+  height: 2em;
+  bottom: 2em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dot {
+  background-color: black;
+  display: inline-block;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  border-radius: 10px;
+  margin: 0.25em;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dipnwf');
+  src:  url('fonts/icomoon.eot?dipnwf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dipnwf') format('truetype'),
+    url('fonts/icomoon.woff?dipnwf') format('woff'),
+    url('fonts/icomoon.svg?dipnwf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
