@@ -1,3 +1,5 @@
+'use strict';
+
 function codeSample(title, image, description) {
   this.title = title;
   this.image = image;
@@ -8,5 +10,8 @@ function project(title, image, link, description) {
   this.title = title;
   this.image = image;
   this.link = link;
-  thils.description = description;
+  this.description = description;
 }
+
+$(function() {
+})
