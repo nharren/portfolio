@@ -4,23 +4,16 @@
 }
 
 @media all and (min-width: 640px) {
-  .menu-close-button-container {
-    display: none;
-  }
-
   header {
       width: auto;
   }
 
-  .menu-item {
-    position: relative;
-    top: calc(50% - 0.55em);
-    display: inline;
-    padding: 0 0.5em;
+  .icon-menu {
+    display: none;
   }
 
-  nav {
-    display: inline;
+  .menu {
+    display: initial;
     position: static;
     float: right;
     width: auto;
@@ -29,16 +22,19 @@
     z-index: 1;
   }
 
-  nav a {
-    color: black;
-  }
-
-  .menu-item {
-    font-size: 1.25em;
-    display: inline;
-  }
-
-  .icon-menu {
+  .menu-close-button-container {
     display: none;
+  }
+
+  .menu-item-container {
+    position: relative;
+    top: calc(50% - 0.55em);
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 1.25em;
+  }
+
+  .menu-item {   
+    color: black;
   }
 }

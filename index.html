@@ -8,22 +8,23 @@
   <meta name="author" content="Nathan Harrenstein">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/modules.css">
   <link rel="stylesheet" href="css/states.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header>
-    <h1>Nathan Harrenstein</h1>
+    <h1 class="title">Nathan Harrenstein</h1>
     <a class="icon-menu"></a>
-    <nav>
+    <div class="menu">
       <div class='menu-close-button-container'>
-        <button class='icon-cross menu-close-button'></button>
+        <button class='menu-close-button icon-cross'></button>
       </div>
-      <div class='menu-item'><a href="https://github.com/nharren?tab=repositories">Projects</a></div>
-      <div class='menu-item'><a href="https://github.com/nharren">Github</a></div>
-      <div class='menu-item'><a href="">About</a></div>
-    </nav>
+      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren?tab=repositories">Projects</a></div>
+      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren">Github</a></div>
+      <div class='menu-item-container'><a class="menu-item" href="">About</a></div>
+    </div>
   </header>
   <br>
   <br>
@@ -37,6 +38,7 @@
   </div>
   <footer>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
   <script src="js/scripts.js"></script>
 </body>
 </html>
