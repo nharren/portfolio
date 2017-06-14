@@ -2,3 +2,43 @@
   width: device-width;
   zoom: 1;
 }
+
+@media all and (min-width: 640px) {
+  .menu-close-button-container {
+    display: none;
+  }
+
+  header {
+      width: auto;
+  }
+
+  .menu-item {
+    position: relative;
+    top: calc(50% - 0.55em);
+    display: inline;
+    padding: 0 0.5em;
+  }
+
+  nav {
+    display: inline;
+    position: static;
+    float: right;
+    width: auto;
+    font-size: initial;
+    background: transparent;
+    z-index: 1;
+  }
+
+  nav a {
+    color: black;
+  }
+
+  .menu-item {
+    font-size: 1.25em;
+    display: inline;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+}

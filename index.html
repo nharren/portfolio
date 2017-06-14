@@ -8,6 +8,7 @@
   <meta name="author" content="Nathan Harrenstein">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/states.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -15,15 +16,18 @@
   <header>
     <h1>Nathan Harrenstein</h1>
     <a class="icon-menu"></a>
+    <nav>
+      <div class='menu-close-button-container'>
+        <button class='icon-cross menu-close-button'></button>
+      </div>
+      <div class='menu-item'><a href="https://github.com/nharren?tab=repositories">Projects</a></div>
+      <div class='menu-item'><a href="https://github.com/nharren">Github</a></div>
+      <div class='menu-item'><a href="">About</a></div>
+    </nav>
   </header>
-  <nav>
-    <div class='menu-close-button-container'>
-      <button class='icon-cross menu-close-button'></button>
-    </div>
-    <div class='menu-item'><a href="https://github.com/nharren?tab=repositories">Projects</a></div>
-    <div class='menu-item'><a href="https://github.com/nharren">Github</a></div>
-    <div class='menu-item'><a href="">About</a></div>
-  </nav>
+  <br>
+  <br>
+  <br>
   <div class="slideshow">
     <div class="dots">
       <span class="dot" onclick="switchCodeSampleView(1)"></span>

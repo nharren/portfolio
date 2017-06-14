@@ -17,9 +17,9 @@ $(document).ready(function() {
 });
 
 function openMenu() {
-  $('nav').css('display','block');
+  $('nav').show();
 }
 
 function closeMenu() {
-  $('nav').css('display','none');
+  $('nav').css('display', '');
 }
