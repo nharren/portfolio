@@ -1,0 +1,17 @@
+header {
+  padding: 2em;
+  height: 2em;
+  background-color: lightgrey;
+  font-family: sans-serif;
+}
+
+main {
+  margin: 2em 0;
+}
+
+footer {
+  display: inline-block;
+  width: 100%;
+  padding: 1em 0;
+  background-color: lightgrey;
+}

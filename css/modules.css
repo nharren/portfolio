@@ -1,0 +1,130 @@
+.title {
+  font-size: 1.75em;
+  font-weight: bold;
+  float: left;
+}
+
+.icon-menu {
+  width: auto;
+  float: right;
+  font-size: 2em;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.85);
+  z-index: 2;
+}
+
+.menu-close-button-container {
+  text-align: right;
+}
+
+.menu-close-button {
+  width: auto;
+  border: none;
+  outline: none;
+}
+
+.icon-cross {
+  text-align: right;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 1em;
+  background: none;
+  border: 0em;
+  color: white;
+}
+
+.menu-item-container {
+  padding: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+}
+
+.slideshow {
+  position: relative;
+  background-color: lightgrey;
+  height: 15em;
+}
+
+.dots {
+  position: absolute;
+  text-align: center;
+  height: 2em;
+  bottom: 2em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dot {
+  background-color: black;
+  display: inline-block;
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  border-radius: 10px;
+  margin: 0.25em;
+}
+
+.projects {
+  padding: 2em;
+}
+
+.projects-title {
+  font-size: 1.75em;
+  text-decoration: underline;
+}
+
+.project-template {
+  display:none;
+  background-color: lightgrey;
+  height: 15em;
+  width: 15em;
+  margin: 2em 0;
+}
+
+.project-header {
+  background-color: rgba(0,0,0,0.7);
+  height: 6em;
+  margin-top: 9em;
+  color: white;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.5em;
+  padding: 0.4em 0;
+}
+
+.project-view-more-button {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.4em 0;
+}
+
+.copyright {
+  float: left;
+  padding-left: 2em;
+}
+
+.social {
+  float: right;
+  padding-right: 1.5em;
+}
+
+.social-link {
+  color: black;
+  padding: 0.5em;
+  font-size: 1.25em;
+}

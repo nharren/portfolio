@@ -8,31 +8,53 @@
   <meta name="author" content="Nathan Harrenstein">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/modules.css">
+  <link rel="stylesheet" href="css/states.css">
 </head>
 
 <body>
-  <header>
-    <h1>Nathan Harrenstein</h1>
-    <div class="icon-menu"></div>
-    <nav>
-      <ul>
-        <li><a href="https://github.com/nharren?tab=repositories">Projects</a></li>
-        <li><a href="https://github.com/nharren">Github</a></li>
-        <li><a href="">About</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="slideshow">
-    <div class="dots">
-      <span class="dot" onclick="switchCodeSampleView(1)"></span>
-      <span class="dot" onclick="switchCodeSampleView(2)"></span>
-      <span class="dot" onclick="switchCodeSampleView(3)"></span>
+  <header class="clearfix">
+    <h1 class="title">Nathan Harrenstein</h1>
+    <a class="icon-menu"></a>
+    <div class="menu">
+      <div class='menu-close-button-container'>
+        <button class='menu-close-button icon-cross'></button>
+      </div>
+      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren?tab=repositories">Projects</a></div>
+      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren">Github</a></div>
+      <div class='menu-item-container'><a class="menu-item" href="">About</a></div>
     </div>
-  </div>
-  <footer>
+  </header>
+  <main>
+    <div class="slideshow">
+      <div class="dots">
+        <span class="dot" onclick="switchCodeSampleView(1)"></span>
+        <span class="dot" onclick="switchCodeSampleView(2)"></span>
+        <span class="dot" onclick="switchCodeSampleView(3)"></span>
+      </div>
+    </div>
+    <div class="projects">
+      <h1 class="projects-title">Projects</h1>
+      <div class="project-template">
+        <div class="project-header">
+          <h2 class="project-title">Project Title</h2>
+          <button class="project-view-more-button">View More</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="clearfix">
+    <h5 class="copyright">© Nathan Harrenstein</h5>
+    <div class="social">
+      <a class="social-link icon-github" href="https://github.com/nharren"></a>
+      <a class="social-link icon-linkedin" href="https://www.linkedin.com/in/nathan-harrenstein-558435bb/"></a>
+      <a class="social-link icon-twitter" href="https://twitter.com/nharrenstein"></a>
+      <a class="social-link icon-facebook2" href="https://www.facebook.com/nathan.harrenstein"></a>
+    </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/models.js"></script> 
   <script src="js/scripts.js"></script>
 </body>
 </html>
