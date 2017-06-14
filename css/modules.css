@@ -45,7 +45,6 @@
   padding: 0.5em;
   font-size: 2em;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 .menu-item {
@@ -78,15 +77,54 @@
   margin: 0.25em;
 }
 
+.projects {
+  padding: 2em;
+}
+
+.projects-title {
+  font-size: 1.75em;
+  text-decoration: underline;
+}
+
+.project-template {
+  display:inline-block;
+  background-color: lightgrey;
+  height: 15em;
+  width: 15em;
+  margin: 2em 0;
+}
+
+.project-header {
+  background-color: rgba(0,0,0,0.7);
+  height: 6em;
+  margin-top: 9em;
+  color: white;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.5em;
+  padding: 0.4em 0;
+}
+
+.project-view-more-button {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.4em 0;
+}
+
 .copyright {
   float: left;
+  padding-left: 2em;
 }
 
 .social {
   float: right;
+  padding-right: 1.5em;
 }
 
 .social-link {
   color: black;
   padding: 0.5em;
+  font-size: 1.25em;
 }

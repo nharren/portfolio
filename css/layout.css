@@ -1,17 +1,17 @@
 header {
-  display: block;
   padding: 2em;
   height: 2em;
   background-color: lightgrey;
   font-family: sans-serif;
 }
 
+main {
+  margin: 2em 0;
+}
+
 footer {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  display: inline-block;
+  width: 100%;
+  padding: 1em 0;
   background-color: lightgrey;
-  margin-top: 2em;
-  padding: 2em;
 }
