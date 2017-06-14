@@ -1,12 +1,12 @@
 .title {
   font-size: 1.75em;
   font-weight: bold;
-  display: inline;
+  float: left;
 }
 
 .icon-menu {
   width: auto;
-  float:right;
+  float: right;
   font-size: 2em;
 }
 
@@ -78,3 +78,15 @@
   margin: 0.25em;
 }
 
+.copyright {
+  float: left;
+}
+
+.social {
+  float: right;
+}
+
+.social-link {
+  color: black;
+  padding: 0.5em;
+}

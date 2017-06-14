@@ -5,3 +5,13 @@ header {
   background-color: lightgrey;
   font-family: sans-serif;
 }
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: lightgrey;
+  margin-top: 2em;
+  padding: 2em;
+}

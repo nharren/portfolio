@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?m27s3b');
-  src:  url('fonts/icomoon.eot?m27s3b#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?m27s3b') format('truetype'),
-    url('fonts/icomoon.woff?m27s3b') format('woff'),
-    url('fonts/icomoon.svg?m27s3b#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?fj03a4');
+  src:  url('fonts/icomoon.eot?fj03a4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?fj03a4') format('truetype'),
+    url('fonts/icomoon.woff?fj03a4') format('woff'),
+    url('fonts/icomoon.svg?fj03a4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,4 +29,16 @@
 }
 .icon-cross:before {
   content: "\ea0f";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
 }
