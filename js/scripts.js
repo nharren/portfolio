@@ -1,3 +1,5 @@
+'use strict';
+
 // function codeSample(title, image, description) {
 //   this.title = title;
 //   this.image = image;
