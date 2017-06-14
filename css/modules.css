@@ -87,7 +87,7 @@
 }
 
 .project-template {
-  display:inline-block;
+  display:none;
   background-color: lightgrey;
   height: 15em;
   width: 15em;
