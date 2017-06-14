@@ -20,34 +20,44 @@ header h1 {
 }
 
 nav {
-
+  display: none;
   position: absolute;
   min-height: 100%;
   min-width: 100%;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.85);
 }
 
-nav ul {
-  background-color: rgba(0,0,0,0.5);
-  display: none;
-  padding: 0;
-  list-style: none;
-  clear: both;
-}
-
-nav:hover ul {
-  display: block;
-}
-
-nav li {
-  margin-right: .4em;
+.icon-cross {
+  text-align: right;
+  width: 100%;
   font-size: 1.5em;
-  padding: .5em .2em;
-  border-bottom: 1px solid #ccc;
+  padding: 1em;
+  background: none;
+  border: 0em;
+  color: white;
+}
+
+.menu-item {
+  padding: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+}
+
+.menu-close-button-container {
+  text-align: right;
+}
+
+.menu-close-button {
+  width: auto;
+  border: none;
+  outline: none;
 }
 
 .slideshow {
@@ -78,11 +88,11 @@ nav a {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?dipnwf');
-  src:  url('fonts/icomoon.eot?dipnwf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?dipnwf') format('truetype'),
-    url('fonts/icomoon.woff?dipnwf') format('woff'),
-    url('fonts/icomoon.svg?dipnwf#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?m27s3b');
+  src:  url('fonts/icomoon.eot?m27s3b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?m27s3b') format('truetype'),
+    url('fonts/icomoon.woff?m27s3b') format('woff'),
+    url('fonts/icomoon.svg?m27s3b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -104,4 +114,7 @@ nav a {
 
 .icon-menu:before {
   content: "\e9bd";
+}
+.icon-cross:before {
+  content: "\ea0f";
 }
