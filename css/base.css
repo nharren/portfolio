@@ -1,5 +1,15 @@
+html {
+  background: #f5fafa;
+}
+
 h1, h2, h3, h4, h5, div {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: lightskyblue;
 }
 
 @font-face {

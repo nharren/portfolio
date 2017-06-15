@@ -1,7 +1,7 @@
 header {
   padding: 2em;
   height: 2em;
-  background-color: lightgrey;
+  background: #acd1e9;
   font-family: sans-serif;
 }
 
@@ -10,8 +10,8 @@ main {
 }
 
 footer {
-  display: inline-block;
+  position: absolute;
   width: 100%;
   padding: 1em 0;
-  background-color: lightgrey;
+  background: #acd1e9;
 }

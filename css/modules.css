@@ -5,6 +5,7 @@
 }
 
 .icon-menu {
+  color: black;
   width: auto;
   float: right;
   font-size: 2em;
@@ -53,6 +54,7 @@
 }
 
 .slideshow {
+  display: none;
   position: relative;
   background-color: lightgrey;
   height: 15em;
@@ -86,18 +88,23 @@
   text-decoration: underline;
 }
 
-.project-template {
-  display:none;
-  background-color: lightgrey;
-  height: 15em;
+.project {
+  display: none;
+  background-color: #ACD1E9;
   width: 15em;
-  margin: 2em 0;
+  margin: 2em 1em;
+}
+
+.template {
+  display: none;
+}
+
+.project-display {
+  height: 10em;
 }
 
 .project-header {
   background-color: rgba(0,0,0,0.7);
-  height: 6em;
-  margin-top: 9em;
   color: white;
   text-align: center;
 }
@@ -105,12 +112,28 @@
 .project-title {
   font-size: 1.5em;
   padding: 0.4em 0;
+  color: inherit;
 }
 
-.project-view-more-button {
-  padding: 0.5em;
-  border-radius: 0.5em;
-  margin: 0.4em 0;
+.project-details {
+  display: none;
+  color: inherit;
+  background: rgba(255,255,255,0.25);
+  padding: 1em 0;
+}
+
+.project-details p, .project-details a {
+  margin: 0.5em;
+}
+
+.project-read-more {
+  display:block;
+  text-align: center;
+  padding: 1em;
+}
+
+.about {
+  display: none;
 }
 
 .copyright {

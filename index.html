@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -21,9 +21,9 @@
       <div class='menu-close-button-container'>
         <button class='menu-close-button icon-cross'></button>
       </div>
-      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren?tab=repositories">Projects</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="projects" href="#">Projects</a></div>
       <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren">Github</a></div>
-      <div class='menu-item-container'><a class="menu-item" href="">About</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="about" href="#">About</a></div>
     </div>
   </header>
   <main>
@@ -34,14 +34,23 @@
         <span class="dot" onclick="switchCodeSampleView(3)"></span>
       </div>
     </div>
-    <div class="projects">
+    <div class="projects tab-content">
       <h1 class="projects-title">Projects</h1>
-      <div class="project-template">
+      <div class="project template">
+        <div class="project-display"></div>
         <div class="project-header">
           <h2 class="project-title">Project Title</h2>
-          <button class="project-view-more-button">View More</button>
+          <div class="project-details">
+            <p class="project-date-created">Project Date</p>
+            <p class="project-description">Project Description</p>
+            <a class="project-link">Visit Project</a>  
+          </div>  
+          <a class="project-read-more" href="#">Read More</a>
         </div>
       </div>
+    </div>
+    <div class="about tab-content">
+      Hi! I'm me. This is about me.
     </div>
   </main>
   <footer class="clearfix">
@@ -54,7 +63,9 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/models.js"></script> 
+  <script src="js/view.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
