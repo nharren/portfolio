@@ -11,7 +11,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-  $('.menu').css('display', '');
+  $('.menu').hide();
 }
 
 function revealProjectDetails() {

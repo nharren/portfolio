@@ -21,9 +21,9 @@
       <div class='menu-close-button-container'>
         <button class='menu-close-button icon-cross'></button>
       </div>
-      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren?tab=repositories">Projects</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="projects" href="#">Projects</a></div>
       <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren">Github</a></div>
-      <div class='menu-item-container'><a class="menu-item" href="">About</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="about" href="#">About</a></div>
     </div>
   </header>
   <main>
@@ -34,7 +34,7 @@
         <span class="dot" onclick="switchCodeSampleView(3)"></span>
       </div>
     </div>
-    <div class="projects">
+    <div class="projects tab-content">
       <h1 class="projects-title">Projects</h1>
       <div class="project template">
         <div class="project-display"></div>
@@ -48,6 +48,9 @@
           <a class="project-read-more" href="#">Read More</a>
         </div>
       </div>
+    </div>
+    <div class="about tab-content">
+      Hi! I'm me. This is about me.
     </div>
   </main>
   <footer class="clearfix">

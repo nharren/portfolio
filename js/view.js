@@ -2,6 +2,16 @@
 
 var projectView = {};
 
+projectView.handleMainNav = function() {
+  $('.menu-item').on('click', function(){
+    $('.tab-content').hide();
+    $('.' + $(this).attr('data-content')).show();
+    if ($('.icon-menu').css('display') !== 'none') {
+      $('.menu').hide();
+    }
+  });
+};
+
 projectView.setTeasers = function() {
   $('.project-details').hide();
 
@@ -21,4 +31,5 @@ projectView.setTeasers = function() {
 
 $(document).ready(function() {
   projectView.setTeasers();
+  projectView.handleMainNav();
 });
