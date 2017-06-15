@@ -1,35 +1,33 @@
 'use strict';
 
-// function codeSample(title, image, description) {
-//   this.title = title;
-//   this.image = image;
-//   this.description = description;
-// }
+var projects = [];
 
-function project(title, image, link, dateCreated, description) {
-  this.title = title;
-  this.image = image;
-  this.link = link;
-  this.dateCreated = dateCreated;
-  this.description = description;
+function Project(projectData) {
+  for (var property in projectData) {
+    this[property] = projectData[property];
+  }
 }
 
+Project.prototype.toHtml = function() {
+  var $projectTemplate = $('.template');
+  var $project = $projectTemplate.clone();
+  $project.removeClass('template');
+  $project.css('display','inline-block');
+  $project.find('.project-title').html(this.title);
+  $project.find('.project-date-created').html(this.date);
+  $project.find('.project-description').html(this.description);
+  $project.find('.project-link').attr('href', this.link);
+  return $project;
+};
 
-var projects = [
-    new project("Portfolio", null, "https://github.com/nharren/301-portfolio", "2017-06-12", "A portfolio assignment for Codefellows 301."),
-    new project("nharren.github.io", null, "https://github.com/nharren/nharren.github.io", "2017-05-25", "A music trivia website.")
-]
-
-projects.sort(function(a,b) {
-    return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
+projectsData.sort(function(a,b) {
+  return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
 });
 
-project.prototype.toHtml = function() {
-    var $projectTemplate = $('project-template');
-    var $project = $projectTemplate.clone();
-    $project.css('display','inline-block');
+projectsData.forEach(function(projectData){
+  projects.push(new Project(projectData));
+});
 
-    // TODO: Fill in template.
-
-    return $project;
-}
+projects.forEach(function(project){
+  $('.projects').append(project.toHtml());
+});

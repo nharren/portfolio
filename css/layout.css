@@ -10,7 +10,7 @@ main {
 }
 
 footer {
-  display: inline-block;
+  position: absolute;
   width: 100%;
   padding: 1em 0;
   background-color: lightgrey;

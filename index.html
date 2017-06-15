@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -36,10 +36,16 @@
     </div>
     <div class="projects">
       <h1 class="projects-title">Projects</h1>
-      <div class="project-template">
+      <div class="project template">
+        <div class="project-display"></div>
         <div class="project-header">
           <h2 class="project-title">Project Title</h2>
-          <button class="project-view-more-button">View More</button>
+          <div class="project-details">
+            <p class="project-date-created">Project Date</p>
+            <p class="project-description">Project Description</p>
+            <a class="project-link">Visit Project</a>  
+          </div>  
+          <a class="project-read-more" href="#">Read More</a>
         </div>
       </div>
     </div>
@@ -54,7 +60,9 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/data.js"></script>
   <script src="js/models.js"></script> 
+  <script src="js/view.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
