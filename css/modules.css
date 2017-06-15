@@ -90,7 +90,7 @@
 
 .project {
   display: none;
-  background-color: lightgrey;
+  background-color: #ACD1E9;
   width: 15em;
   margin: 2em 1em;
 }
@@ -130,6 +130,10 @@
   display:block;
   text-align: center;
   padding: 1em;
+}
+
+.about {
+  display: none;
 }
 
 .copyright {
