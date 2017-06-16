@@ -4,14 +4,12 @@ var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
-    $('.tab-content').hide();
-    $('.menu-item').css('color','initial');
-    $('#' + $(this).attr('data-content')).show();
-    if (window.innerWidth < 640) {
-      $('.menu').hide();
-    } else {
-      $(this).css('color','darkblue');
-    }
+
+    $('.selected-tab').removeClass('selected-tab');
+    $('.tab-content:not(.hidden)').addClass('hidden');
+
+    $(this).addClass('selected-tab');
+    $('#' + $(this).data('content')).removeClass('hidden');
   });
 };
 
@@ -35,15 +33,4 @@ projectView.setTeasers = function() {
 $(document).ready(function() {
   projectView.setTeasers();
   projectView.handleMainNav();
-
-  $(window).on('resize', function() {
-    if (window.innerWidth > 640) {
-      $('.menu').show();
-      $('.menu-item').css('color','black');
-      $('.menu-item[data-content=\'' + $('.tab-content:visible').attr('id') + '\']').css('color','darkblue');
-    } else {
-      $('.menu').hide();
-      $('.menu-item').css('color','white');
-    }
-  })
 });

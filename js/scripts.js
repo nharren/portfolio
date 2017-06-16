@@ -3,6 +3,7 @@
 $(document).ready(function() {
   $('.icon-menu').on('mouseenter', openMenu);
   $('.menu-close-button').on('click', closeMenu);
+  $('.menu-item').on('click', closeMenu);
 });
 
 function openMenu() {
@@ -10,5 +11,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-  $('.menu').hide();
+  if (window.innerWidth <= 640) {
+    $('.menu').hide();
+  }
 }

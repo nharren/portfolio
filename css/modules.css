@@ -31,7 +31,7 @@
 
 @media (min-width: 640px) {
   .menu {
-    display: block;
+    display: block !important;
     float: right;
     position: initial;
     top: initial;
@@ -93,10 +93,6 @@
   .menu-item {   
     color: black;
   }
-}
-
-.menu-item[data-content="projects"] {
-  color: darkblue;
 }
 
 .slideshow {
@@ -178,10 +174,6 @@
   display:block;
   text-align: center;
   padding: 1em;
-}
-
-main .tab-content:nth-child(n+3) {
-  display: none;
 }
 
 #skills, #about {
