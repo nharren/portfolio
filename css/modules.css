@@ -11,7 +11,7 @@
   font-size: 2em;
 }
 
-@media all and (min-width: 640px) {
+@media (min-width: 640px) {
   .icon-menu {
     display: none;
   }
@@ -29,11 +29,11 @@
   line-height: 2em;
 }
 
-@media all and (min-width: 640px) {
+@media (min-width: 640px) {
   .menu {
+    display: block;
     float: right;
     position: initial;
-    display: block;
     top: initial;
     left: initial;
     height: initial;
@@ -48,7 +48,7 @@
   text-align: right;
 }
 
-@media all and (min-width: 640px) {
+@media (min-width: 640px) {
   .menu-close-button-container {
     display: none;
   }
@@ -76,7 +76,7 @@
   font-weight: bold;
 }
 
-@media all and (min-width: 640px) {
+@media (min-width: 640px) {
   .menu-item-container {
     display: inline;
     padding: 0 0.5em;
@@ -89,7 +89,7 @@
   text-decoration: none;
 }
 
-@media all and (min-width: 640px) {
+@media (min-width: 640px) {
   .menu-item {   
     color: black;
   }
@@ -143,7 +143,7 @@
   vertical-align: top;
 }
 
-@media all and (min-width: 640px) {
+@media (min-width: 640px) {
   .project {
     max-width: 300px
   }

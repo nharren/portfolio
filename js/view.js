@@ -6,7 +6,7 @@ projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
     $('.tab-content').hide();
     $('#' + $(this).attr('data-content')).show();
-    if ($('.icon-menu').css('display') !== 'none') {
+    if (window.innerWidth < 640) {
       $('.menu').hide();
     }
   });
@@ -32,4 +32,12 @@ projectView.setTeasers = function() {
 $(document).ready(function() {
   projectView.setTeasers();
   projectView.handleMainNav();
+
+  $(window).on('resize', function() {
+    if (window.innerWidth > 640) {
+      $('.menu').show();
+    } else {
+      $('.menu').hide();
+    }
+  })
 });
