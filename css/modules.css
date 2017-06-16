@@ -11,6 +11,12 @@
   font-size: 2em;
 }
 
+@media all and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
 .menu {
   display: none;
   position: absolute;
@@ -23,8 +29,29 @@
   line-height: 2em;
 }
 
+@media all and (min-width: 640px) {
+  .menu {
+    float: right;
+    position: initial;
+    display: block;
+    top: initial;
+    left: initial;
+    height: initial;
+    width: initial;  
+    font-size: initial;
+    background: transparent;
+    z-index: 1;
+  }
+}
+
 .menu-close-button-container {
   text-align: right;
+}
+
+@media all and (min-width: 640px) {
+  .menu-close-button-container {
+    display: none;
+  }
 }
 
 .menu-close-button {
@@ -49,9 +76,23 @@
   font-weight: bold;
 }
 
+@media all and (min-width: 640px) {
+  .menu-item-container {
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 1.25em;
+  }
+}
+
 .menu-item {
   color: white;
   text-decoration: none;
+}
+
+@media all and (min-width: 640px) {
+  .menu-item {   
+    color: black;
+  }
 }
 
 .slideshow {
@@ -100,6 +141,12 @@
   min-width: 200px;
   margin: 15px;
   vertical-align: top;
+}
+
+@media all and (min-width: 640px) {
+  .project {
+    max-width: 300px
+  }
 }
 
 .project-display {
