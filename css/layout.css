@@ -1,16 +1,14 @@
 header {
-  padding: 2em;
-  height: 2em;
+  padding: 2em; 
   background: #acd1e9;
   font-family: sans-serif;
 }
 
 main {
-  margin: 2em 0;
+  flex: 1;
 }
 
 footer {
-  position: absolute;
   width: 100%;
   padding: 1em 0;
   background: #acd1e9;
