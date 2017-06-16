@@ -1,5 +1,5 @@
 header {
-  padding: 2em; 
+  padding: 22.5px 40px; 
   background: #acd1e9;
   font-family: sans-serif;
 }
@@ -9,7 +9,6 @@ main {
 }
 
 footer {
-  width: 100%;
-  padding: 1em 0;
+  padding: 15px 30px;
   background: #acd1e9;
 }

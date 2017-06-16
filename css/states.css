@@ -34,4 +34,8 @@
   .menu-item {   
     color: black;
   }
+
+  .project {
+    max-width: 300px
+  }
 }

@@ -34,24 +34,26 @@
         <span class="dot" onclick="switchCodeSampleView(3)"></span>
       </div>
     </div>
-    <div class="projects tab-content">
+    <section id="projects" class="tab-content">
       <h1 class="projects-title">Projects</h1>
-      <div class="project template">
-        <div class="project-display"></div>
-        <div class="project-header">
-          <h2 class="project-title">Project Title</h2>
-          <div class="project-details">
-            <p class="project-date-created">Project Date</p>
-            <p class="project-description">Project Description</p>
-            <a class="project-link">Visit Project</a>  
-          </div>  
-          <a class="project-read-more" href="#">Read More</a>
+      <div class="projects-container">      
+        <div class="project template">
+          <div class="project-display"></div>
+          <div class="project-header">
+            <h2 class="project-title">Project Title</h2>
+            <div class="project-details">
+              <p class="project-date-created">Project Date</p>
+              <p class="project-description">Project Description</p>
+              <a class="project-link">Visit Project</a>  
+            </div>  
+            <a class="project-read-more" href="#">Read More</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="about tab-content">
+    </section>
+    <section id="about" class="tab-content">
       Hi! I'm me. This is about me.
-    </div>
+    </section>
   </main>
   <footer class="clearfix">
     <h5 class="copyright">© Nathan Harrenstein</h5>
@@ -63,6 +65,7 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="js/data.js"></script>
   <script src="js/models.js"></script> 
   <script src="js/view.js"></script>

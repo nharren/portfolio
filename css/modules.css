@@ -80,20 +80,26 @@
   margin: 0.25em;
 }
 
-.projects {
-  padding: 2em;
+#projects {
+  padding: 30px 15px;
 }
 
 .projects-title {
   font-size: 1.75em;
+  margin: 0 0 15px 15px;
   text-decoration: underline;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project {
   display: none;
-  background-color: #ACD1E9;
-  width: 15em;
-  margin: 2em 1em;
+  flex: 1;
+  min-width: 200px;
+  margin: 15px;
   vertical-align: top;
 }
 
@@ -103,6 +109,7 @@
 
 .project-display {
   height: 10em;
+  background-color: #ACD1E9;
 }
 
 .project-header {
@@ -134,18 +141,16 @@
   padding: 1em;
 }
 
-.about {
+#about {
   display: none;
 }
 
 .copyright {
   float: left;
-  padding-left: 2em;
 }
 
 .social {
   float: right;
-  padding-right: 1.5em;
 }
 
 .social-link {

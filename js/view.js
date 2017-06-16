@@ -5,7 +5,7 @@ var projectView = {};
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
     $('.tab-content').hide();
-    $('.' + $(this).attr('data-content')).show();
+    $('#' + $(this).attr('data-content')).show();
     if ($('.icon-menu').css('display') !== 'none') {
       $('.menu').hide();
     }
@@ -15,7 +15,7 @@ projectView.handleMainNav = function() {
 projectView.setTeasers = function() {
   $('.project-details').hide();
 
-  $('.projects').on('click','.project-read-more', function(event) {
+  $('.projects-container').on('click','.project-read-more', function(event) {
     var $readOn = $(this);
     $readOn.prev('.project-details').slideToggle();
 
