@@ -23,5 +23,5 @@ projectsData.forEach(function(projectData){
 });
 
 projects.forEach(function(project){
-  $('.projects-container').append(project.toHtml());
+  $('#projects').append(project.toHtml());
 });
