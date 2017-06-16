@@ -3,7 +3,7 @@
 var projectView = {};
 
 projectView.handleMainNav = function() {
-  $('.menu-item').on('click', function(){
+  $('.tab').on('click', function(){
     $('.tab-content').hide();
     $('#' + $(this).attr('data-content')).show();
     if ($('.icon-menu').css('display') !== 'none') {
