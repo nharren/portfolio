@@ -17,9 +17,9 @@
       <div class="project-header">
         <h2 class="project-title">{{title}}</h2>
         <div class="project-details">
-          <p class="project-date">{{date}}</p>
-          <p class="project-description">{{description}}</p>
-          <a class="project-link" href="{{link}}">Visit Project</a>  
+          <p>{{date}}</p>
+          <p>{{description}}</p>
+          <a href="{{link}}">Visit Project</a>  
         </div>  
         <a class="project-read-more" href="#">Read More</a>
       </div>
@@ -35,9 +35,9 @@
       <div class='menu-close-button-container'>
         <button class='menu-close-button icon-cross'></button>
       </div>
-      <div class='menu-item-container'><a class="menu-item tab" data-content="projects" href="#">Projects</a></div>
-      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren">Github</a></div>
-      <div class='menu-item-container'><a class="menu-item tab" data-content="about" href="#">About</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="projects" href="#">Projects</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="skills" href="#">Skills</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="about" href="#">About</a></div>
     </div>
   </header>
   <main>
@@ -50,9 +50,19 @@
     </div>
     <section id="projects" class="tab-content">
       <h1 class="projects-title">Projects</h1>
-      <div class="projects-container">      
-        
-      </div>
+      <div class="projects-container"></div>
+    </section>
+    <section id="skills" class="tab-content">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>jQuery</li>
+        <li>SQL</li>
+        <li>Handlebars</li>
+        <li>C#</li>
+        <li>WPF</li>
+      </ul>
     </section>
     <section id="about" class="tab-content">
       Hi! I'm me. This is about me.
