@@ -4,13 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio">
   <meta name="author" content="Nathan Harrenstein">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/modules.css">
-  <link rel="stylesheet" href="css/states.css">
+  <script id="project-template" type="text/x-handlebars-template">
+    <div class="project">
+      <div class="project-display" style="background-image: url('{{image}}')"></div>
+      <div class="project-header">
+        <h2 class="project-title">{{title}}</h2>
+        <div class="project-details">
+          <p>{{date}}</p>
+          <p>{{description}}</p>
+          <a href="{{link}}">Visit Project</a>  
+        </div>  
+        <a class="project-read-more" href="#">Read More</a>
+      </div>
+    </div>
+  </script>
 </head>
 
 <body>
@@ -22,7 +36,7 @@
         <button class='menu-close-button icon-cross'></button>
       </div>
       <div class='menu-item-container'><a class="menu-item" data-content="projects" href="#">Projects</a></div>
-      <div class='menu-item-container'><a class="menu-item" href="https://github.com/nharren">Github</a></div>
+      <div class='menu-item-container'><a class="menu-item" data-content="skills" href="#">Skills</a></div>
       <div class='menu-item-container'><a class="menu-item" data-content="about" href="#">About</a></div>
     </div>
   </header>
@@ -34,24 +48,27 @@
         <span class="dot" onclick="switchCodeSampleView(3)"></span>
       </div>
     </div>
-    <div class="projects tab-content">
-      <h1 class="projects-title">Projects</h1>
-      <div class="project template">
-        <div class="project-display"></div>
-        <div class="project-header">
-          <h2 class="project-title">Project Title</h2>
-          <div class="project-details">
-            <p class="project-date-created">Project Date</p>
-            <p class="project-description">Project Description</p>
-            <a class="project-link">Visit Project</a>  
-          </div>  
-          <a class="project-read-more" href="#">Read More</a>
-        </div>
-      </div>
-    </div>
-    <div class="about tab-content">
-      Hi! I'm me. This is about me.
-    </div>
+    <section id="projects" class="tab-content">
+    </section>
+    <section id="skills" class="tab-content">
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>SQL</li>
+        <li>Handlebars</li>
+        <li>C#</li>
+        <li>WPF</li>
+        <li>WCF Data Services</li>
+        <li>WinForms</li>
+        <li>ASP.NET Web Api 2</li>
+        <li>F#</li>
+      </ul>
+    </section>
+    <section id="about" class="tab-content">
+      Hi! I'm Nathan Harrenstein. I'm from Bellevue, Washington and I learned to program with C# as a side hobby and now I find myself programming more and more. I am also a cellist. I have been playing the cello for 25 years and hold two degrees including a master's degree in cello performance. 
+    </section>
   </main>
   <footer class="clearfix">
     <h5 class="copyright">© Nathan Harrenstein</h5>
@@ -63,6 +80,7 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="js/data.js"></script>
   <script src="js/models.js"></script> 
   <script src="js/view.js"></script>

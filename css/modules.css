@@ -11,6 +11,12 @@
   font-size: 2em;
 }
 
+@media (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
 .menu {
   display: none;
   position: absolute;
@@ -20,10 +26,32 @@
   width: 100%;
   background-color: rgba(0,0,0,0.85);
   z-index: 2;
+  line-height: 2em;
+}
+
+@media (min-width: 640px) {
+  .menu {
+    display: block;
+    float: right;
+    position: initial;
+    top: initial;
+    left: initial;
+    height: initial;
+    width: initial;  
+    font-size: initial;
+    background: transparent;
+    z-index: 1;
+  }
 }
 
 .menu-close-button-container {
   text-align: right;
+}
+
+@media (min-width: 640px) {
+  .menu-close-button-container {
+    display: none;
+  }
 }
 
 .menu-close-button {
@@ -48,9 +76,27 @@
   font-weight: bold;
 }
 
+@media (min-width: 640px) {
+  .menu-item-container {
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 1.25em;
+  }
+}
+
 .menu-item {
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 640px) {
+  .menu-item {   
+    color: black;
+  }
+}
+
+.menu-item[data-content="projects"] {
+  color: darkblue;
 }
 
 .slideshow {
@@ -79,28 +125,30 @@
   margin: 0.25em;
 }
 
-.projects {
-  padding: 2em;
-}
-
-.projects-title {
-  font-size: 1.75em;
-  text-decoration: underline;
+#projects {
+  padding: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project {
-  display: none;
-  background-color: #ACD1E9;
-  width: 15em;
-  margin: 2em 1em;
+  flex: 1;
+  min-width: 200px;
+  margin: 15px;
+  vertical-align: top;
 }
 
-.template {
-  display: none;
+@media (min-width: 640px) {
+  .project {
+    max-width: 300px
+  }
 }
 
 .project-display {
   height: 10em;
+  background-color: #ACD1E9;
+  background-size: cover;
+  background-position: center;
 }
 
 .project-header {
@@ -132,18 +180,26 @@
   padding: 1em;
 }
 
-.about {
+main .tab-content:nth-child(n+3) {
   display: none;
+}
+
+#skills, #about {
+  padding: 30px;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.skills-list {
+  list-style: disc inside;
 }
 
 .copyright {
   float: left;
-  padding-left: 2em;
 }
 
 .social {
   float: right;
-  padding-right: 1.5em;
 }
 
 .social-link {

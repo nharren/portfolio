@@ -1,8 +1,8 @@
 'use strict';
 
 $(document).ready(function() {
-  $('.icon-menu').mouseenter(openMenu);
-  $('.menu-close-button').click(closeMenu);
+  $('.icon-menu').on('mouseenter', openMenu);
+  $('.menu-close-button').on('click', closeMenu);
 });
 
 function openMenu() {

@@ -2,21 +2,24 @@
 
 var projectsData = [
   {
-    title: 'Portfolio1',
+    title: 'Portfolio',
     link: 'https://github.com/nharren/301-portfolio',
     date: '2017-06-12',
-    description: 'A portfolio assignment for Codefellows 301.'
+    image: 'images/Portfolio.jpg',
+    description: 'The current website.'
   },
   {
-    title: 'Portfolio2',
-    link: 'https://github.com/nharren/301-portfolio',
-    date: '2017-06-12',
-    description: 'A portfolio assignment for Codefellows 301.'
+    title: 'Music Timeline',
+    link: 'https://github.com/nharren/MusicTimeline',
+    date: '2015-12-15',
+    image: 'images/MusicTimeline.jpg',
+    description: 'An interactive timeline for discovering and learning about music.'
   },
   {
-    title: 'Portfolio3',
-    link: 'https://github.com/nharren/301-portfolio',
-    date: '2017-06-12',
-    description: 'A portfolio assignment for Codefellows 301.'
+    title: 'Math Grapher',
+    link: 'https://github.com/nharren/MathGrapher',
+    date: '2016-06-12',
+    image: 'images/MathGrapher.gif',
+    description: 'A simple animation-capable math grapher built on WPF and C#.'
   },
 ];
