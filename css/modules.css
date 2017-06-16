@@ -96,15 +96,10 @@
 }
 
 .project {
-  display: none;
   flex: 1;
   min-width: 200px;
   margin: 15px;
   vertical-align: top;
-}
-
-.template {
-  display: none;
 }
 
 .project-display {

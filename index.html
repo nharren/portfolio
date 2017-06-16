@@ -11,6 +11,20 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/modules.css">
   <link rel="stylesheet" href="css/states.css">
+  <script id="project-template" type="text/x-handlebars-template">
+    <div class="project">
+      <div class="project-display"></div>
+      <div class="project-header">
+        <h2 class="project-title">{{title}}</h2>
+        <div class="project-details">
+          <p class="project-date">{{date}}</p>
+          <p class="project-description">{{description}}</p>
+          <a class="project-link" href="{{link}}">Visit Project</a>  
+        </div>  
+        <a class="project-read-more" href="#">Read More</a>
+      </div>
+    </div>
+  </script>
 </head>
 
 <body>
@@ -37,18 +51,7 @@
     <section id="projects" class="tab-content">
       <h1 class="projects-title">Projects</h1>
       <div class="projects-container">      
-        <div class="project template">
-          <div class="project-display"></div>
-          <div class="project-header">
-            <h2 class="project-title">Project Title</h2>
-            <div class="project-details">
-              <p class="project-date-created">Project Date</p>
-              <p class="project-description">Project Description</p>
-              <a class="project-link">Visit Project</a>  
-            </div>  
-            <a class="project-read-more" href="#">Read More</a>
-          </div>
-        </div>
+        
       </div>
     </section>
     <section id="about" class="tab-content">
