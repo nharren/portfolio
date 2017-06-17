@@ -153,24 +153,31 @@
 
 .project-display {
   height: 10em;
-  background-color: #ACD1E9;
+  background-color: #d7e8f4;
   background-size: cover;
   background-position: center;
   border-color: #c3ddef;
   border-style: solid;
   border-width: 1px 1px 0 1px;
+  
 }
 
 .project-header {
   background-color: #d7e8f4;
   text-align: center;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .project-title {
   font-size: 1.25em;
   padding: 0.5em 0;
   color: inherit;
-  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-bottom-width: 0.5px;
 }
 
 .project-details {
@@ -189,6 +196,9 @@
   color: darkblue;
   text-align: center;
   padding: 1em;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-top-width: 0.5px;
 }
 
 #skills, #about {
