@@ -1,7 +1,10 @@
 header {
-  padding: 22.5px 30px; 
-  background: #acd1e9;
+  padding: 40px; 
+  background: #d7e8f4;
   font-family: sans-serif;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: #c3ddef;
 }
 
 main {
@@ -10,5 +13,8 @@ main {
 
 footer {
   padding: 15px 30px;
-  background: #acd1e9;
+  background: #d7e8f4;
+  border-top: 1px;
+  border-style: solid;
+  border-color: #c3ddef;
 }
