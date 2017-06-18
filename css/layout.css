@@ -5,6 +5,7 @@ header {
   border-bottom: 1px;
   border-style: solid;
   border-color: #c3ddef;
+  flex: none;
 }
 
 main {

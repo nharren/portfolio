@@ -14,7 +14,8 @@
   color: black;
   width: auto;
   float: right;
-  font-size: 1.75em;
+  font-size: 1.5em;
+  line-height: 1.5em;
 }
 
 @media (min-width: 640px) {
@@ -25,71 +26,26 @@
 
 @media (max-width: 370px) {
   .icon-menu {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    line-height: 1.5em
   }
 }
 
 .menu {
   display: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
+  clear: both;
   background-color: #d7e8f4;
-  z-index: 2;
   line-height: 2em;
+  padding: 30px 0;
 }
 
 @media (min-width: 640px) {
   .menu {
     display: block !important;
+    clear: none;
     float: right;
-    position: initial;
-    top: initial;
-    left: initial;
-    height: initial;
-    width: initial;  
-    font-size: initial;
     background: transparent;
-    z-index: 1;
-  }
-}
-
-.menu-close-button-container {
-  text-align: right;
-}
-
-@media (min-width: 640px) {
-  .menu-close-button-container {
-    display: none;
-  }
-}
-
-.menu-close-button {
-  width: auto;
-  border: none;
-  outline: none;
-}
-
-.icon-cross {
-  text-align: right;
-  width: 100%;
-  font-size: 1.5em;
-  padding: 1em;
-  background: none;
-  border: 0em;
-}
-
-.menu-item-container {
-  padding: 10px 30px;
-}
-
-@media (min-width: 640px) {
-  .menu-item-container {
-    display: inline;
-    padding: 0 0.5em;
-    font-size: 1.25em;
+    padding: 0;
   }
 }
 
@@ -98,38 +54,17 @@
   font-size: 2em;
   text-decoration: none;
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 0px;
+  display: block;
 }
 
 @media (min-width: 640px) {
   .menu-item {
     font-size: 100%;
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 1.25em;
   }
-}
-
-.slideshow {
-  display: none;
-  position: relative;
-  background-color: lightgrey;
-  height: 15em;
-}
-
-.dots {
-  position: absolute;
-  text-align: center;
-  height: 2em;
-  bottom: 2em;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.dot {
-  background-color: black;
-  display: inline-block;
-  cursor: pointer;
-  width: 1em;
-  height: 1em;
-  border-radius: 10px;
-  margin: 0.25em;
 }
 
 #projects {
@@ -149,6 +84,10 @@
   .project {
     max-width: 300px
   }
+}
+
+.project-link {
+  display: block;
 }
 
 .project-display {

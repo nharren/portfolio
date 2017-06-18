@@ -4,12 +4,16 @@ var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
+    var $previousTab = $('.selected');
+    var $previousTabContent = $('#' + $previousTab.data('content'));
+    var $newTab = $(this);
+    var $newTabContent = $('#' + $newTab.data('content'))
 
-    $('.selected-tab').removeClass('selected-tab');
-    $('.tab-content:not(.hidden)').addClass('hidden');
+    $previousTab.removeClass('selected');
+    $newTab.addClass('selected');
 
-    $(this).addClass('selected-tab');
-    $('#' + $(this).data('content')).removeClass('hidden');
+    $previousTabContent.addClass('hidden');  
+    $newTabContent.removeClass('hidden');
   });
 };
 
@@ -18,7 +22,8 @@ projectView.setTeasers = function() {
 
   $('#projects').on('click','.project-header', function(event) {
     var $projectHeader = $(this);
-    $projectHeader.siblings('.project-details').slideToggle();
+    $projectHeader.prev('.project-details').slideToggle();
+
     var $arrow = $projectHeader.children('.project-title-arrow');
     $arrow.toggleClass('expanded');
     $arrow.toggleClass('collapsed');

@@ -1,17 +1,13 @@
 'use strict';
 
 $(document).ready(function() {
-  $('.icon-menu').on('mouseenter', openMenu);
-  $('.menu-close-button').on('click', closeMenu);
-  $('.menu-item').on('click', closeMenu);
+  $('.icon-menu').on('click', toggleMenu);
+  $('.menu-item').on('click', toggleMenu);
 });
 
-function openMenu() {
-  $('.menu').show();
-}
-
-function closeMenu() {
-  if (window.innerWidth <= 640) {
-    $('.menu').hide();
-  }
+function toggleMenu() {
+  $('main').toggle();
+  $('.menu').slideToggle();
+  $('.icon-menu').toggleClass('opened');
+  $('header').toggleClass('stretched');
 }

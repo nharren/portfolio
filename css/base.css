@@ -20,11 +20,11 @@ a {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?fj03a4');
-  src:  url('fonts/icomoon.eot?fj03a4#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?fj03a4') format('truetype'),
-    url('fonts/icomoon.woff?fj03a4') format('woff'),
-    url('fonts/icomoon.svg?fj03a4#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?q8cn0x');
+  src:  url('fonts/icomoon.eot?q8cn0x#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q8cn0x') format('truetype'),
+    url('fonts/icomoon.woff?q8cn0x') format('woff'),
+    url('fonts/icomoon.svg?q8cn0x#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -47,9 +47,6 @@ a {
 .icon-menu:before {
   content: "\e9bd";
 }
-.icon-cross:before {
-  content: "\ea0f";
-}
 .icon-facebook2:before {
   content: "\ea91";
 }
@@ -62,3 +59,4 @@ a {
 .icon-linkedin:before {
   content: "\eac9";
 }
+
