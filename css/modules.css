@@ -4,12 +4,6 @@
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (max-width: 370px) {
-  .title {
-    font-size: 1.7em;
-  }
-}
-
 .icon-menu {
   color: black;
   width: auto;
@@ -21,13 +15,6 @@
 @media (min-width: 640px) {
   .icon-menu {
     display: none;
-  }
-}
-
-@media (max-width: 370px) {
-  .icon-menu {
-    font-size: 1.25em;
-    line-height: 1.5em
   }
 }
 
