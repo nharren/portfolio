@@ -16,15 +16,12 @@ projectView.handleMainNav = function() {
 projectView.setTeasers = function() {
   $('.project-details').hide();
 
-  $('#projects').on('click','.project-read-more', function(event) {
-    var $readOn = $(this);
-    $readOn.prev('.project-details').slideToggle();
-
-    if ($readOn.text().startsWith('Read M')) {
-      $readOn.text('Read Less');
-    } else {
-      $readOn.text('Read More');
-    }
+  $('#projects').on('click','.project-header', function(event) {
+    var $projectHeader = $(this);
+    $projectHeader.siblings('.project-details').slideToggle();
+    var $arrow = $projectHeader.children('.project-title-arrow');
+    $arrow.toggleClass('expanded');
+    $arrow.toggleClass('collapsed');
 
     event.preventDefault();
   });

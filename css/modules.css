@@ -152,17 +152,31 @@
 }
 
 .project-display {
-  height: 10em;
+  height: 12.5em;
   background-color: #d7e8f4;
   background-size: cover;
   background-position: center;
   border-color: #c3ddef;
   border-style: solid;
   border-width: 1px 1px 0 1px;
-  
+}
+
+.project-details {
+  display: none;
+  background: #ebf3fa;
+  padding: 0.75em 0 1.25em 0;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-width: 0 1px;
+  text-align: center;
+}
+
+.project-details * {
+  margin: 0.5em;
 }
 
 .project-header {
+  display: block;
   background-color: #d7e8f4;
   text-align: center;
   border-color: #c3ddef;
@@ -172,33 +186,16 @@
 
 .project-title {
   font-size: 1.25em;
-  padding: 0.5em 0;
-  color: inherit;
+  padding-top: 0.75em;
+  padding-bottom: 0.5em;
+  color: black;
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border-color: #c3ddef;
-  border-style: solid;
-  border-bottom-width: 0.5px;
 }
 
-.project-details {
-  display: none;
-  color: inherit;
-  background: rgba(255,255,255,0.25);
-  padding: 1em 0;
-}
-
-.project-details p, .project-details a {
-  margin: 0.5em;
-}
-
-.project-read-more {
-  display: block;
-  color: darkblue;
-  text-align: center;
-  padding: 1em;
-  border-color: #c3ddef;
-  border-style: solid;
-  border-top-width: 0.5px;
+.project-title-arrow {
+  font-size: 1.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #aed1ea;
 }
 
 #skills, #about {

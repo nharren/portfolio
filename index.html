@@ -16,15 +16,15 @@
   <script id="project-template" type="text/x-handlebars-template">
     <div class="project">
       <div class="project-display" style="background-image: url('{{image}}')"></div>
-      <div class="project-header">
-        <h2 class="project-title">{{title}}</h2>
-        <div class="project-details">
-          <p>{{date}}</p>
+      <div class="project-details">          
           <p>{{description}}</p>
-          <a href="{{link}}">Visit Project</a>  
-        </div>  
-        <a class="project-read-more" href="#">Read More</a>
-      </div>
+          <p>{{date}}</p>
+          <a href="{{link}}">Visit</a>  
+        </div>
+      <a class="project-header">
+        <p class="project-title">{{title}}</p>
+        <p class="project-title-arrow collapsed"></p>       
+      </a>
     </div>
   </script>
 </head>
@@ -43,13 +43,6 @@
     </div>
   </header>
   <main>
-    <div class="slideshow">
-      <div class="dots">
-        <span class="dot" onclick="switchCodeSampleView(1)"></span>
-        <span class="dot" onclick="switchCodeSampleView(2)"></span>
-        <span class="dot" onclick="switchCodeSampleView(3)"></span>
-      </div>
-    </div>
     <section id="projects" class="tab-content"></section>
     <section id="skills" class="tab-content hidden">
       <ul class="skills-list">
@@ -78,7 +71,7 @@
       <a class="social-link icon-twitter" href="https://twitter.com/nharrenstein"></a>
       <a class="social-link icon-facebook2" href="https://www.facebook.com/nathan.harrenstein"></a>
     </div>
-    <h5 class="copyright">Copyright © 2017 Nathan Harrenstein</h5>
+    <h5 class="copyright">© Nathan Harrenstein</h5>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
