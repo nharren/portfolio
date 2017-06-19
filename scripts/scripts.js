@@ -8,7 +8,7 @@ $(document).ready(function() {
 function handleEvents(event) {
   if (event.matches) {
     $('.icon-menu').off('click', toggleMenu);
-    $('.menu-item').off('click', toggleMenu);   
+    $('.menu-item').off('click', toggleMenu);
   } else {
     $('.icon-menu').on('click', toggleMenu);
     $('.menu-item').on('click', toggleMenu);

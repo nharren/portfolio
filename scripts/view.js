@@ -12,7 +12,7 @@ projectView.handleMainNav = function() {
     $previousTab.removeClass('selected');
     $newTab.addClass('selected');
 
-    $previousTabContent.addClass('hidden');  
+    $previousTabContent.addClass('hidden');
     $newTabContent.removeClass('hidden');
   });
 };
