@@ -1,0 +1,166 @@
+.title {
+  font-size: 2em;
+  float: left;
+  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon-menu {
+  color: black;
+  width: auto;
+  float: right;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+@media (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  clear: both;
+  background-color: #d7e8f4;
+  line-height: 2em;
+  padding: 30px 0;
+}
+
+@media (min-width: 640px) {
+  .menu {
+    display: block !important;
+    clear: none;
+    float: right;
+    background: transparent;
+    padding: 0;
+  }
+}
+
+.menu-item {
+  color: black;
+  font-size: 2em;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 0px;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .menu-item {
+    font-size: 100%;
+    display: inline;
+    padding: 0 0.5em;
+    font-size: 1.25em;
+  }
+}
+
+#projects {
+  padding: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex: 1;
+  min-width: 200px;
+  margin: 15px;
+  vertical-align: top;
+}
+
+@media (min-width: 640px) {
+  .project {
+    max-width: 300px
+  }
+}
+
+.project-link {
+  display: block;
+}
+
+.project-display {
+  height: 12.5em;
+  background-color: #d7e8f4;
+  background-size: cover;
+  background-position: center;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+}
+
+.project-details {
+  display: none;
+  background: #ebf3fa;
+  padding: 0.75em 0 1.25em 0;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-width: 0 1px;
+  text-align: center;
+}
+
+.project-details * {
+  margin: 0.5em;
+}
+
+.project-header {
+  display: block;
+  background-color: #d7e8f4;
+  text-align: center;
+  border-color: #c3ddef;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.project-title {
+  font-size: 1.25em;
+  padding-top: 0.75em;
+  padding-bottom: 0.5em;
+  color: black;
+  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project-title-arrow {
+  font-size: 1.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #aed1ea;
+}
+
+#skills, #about {
+  padding: 30px;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.skills-list {
+  list-style: disc inside;
+}
+
+.copyright {
+  float: left;
+  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width:488px) {
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+.social {
+  float: right;
+}
+
+@media (max-width:488px) {
+  .social {
+    width: 100%;
+    padding: 7px 0 ;
+    text-align: center;
+  }
+}
+
+.social-link {
+  color: black;
+  padding: 0.5em;
+  font-size: 1.25em;
+}

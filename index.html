@@ -7,50 +7,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio">
   <meta name="author" content="Nathan Harrenstein">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/modules.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/states.css">
   <script id="project-template" type="text/x-handlebars-template">
     <div class="project">
-      <div class="project-display" style="background-image: url('{{image}}')"></div>
-      <div class="project-header">
-        <h2 class="project-title">{{title}}</h2>
-        <div class="project-details">
-          <p>{{date}}</p>
-          <p>{{description}}</p>
-          <a href="{{link}}">Visit Project</a>  
-        </div>  
-        <a class="project-read-more" href="#">Read More</a>
+      <a class="project-link" href="{{link}}">
+        <div class="project-display" style="background-image: url('{{image}}')"></div>
+      </a>
+      <div class="project-details">          
+        <p>{{description}}</p>
+        <p>{{date}}</p>
       </div>
+      <a class="project-header">
+        <p class="project-title">{{title}}</p>
+        <p class="project-title-arrow collapsed"></p>       
+      </a>
     </div>
   </script>
 </head>
-
 <body>
   <header class="clearfix">
     <h1 class="title">Nathan Harrenstein</h1>
     <a class="icon-menu"></a>
-    <div class="menu">
-      <div class='menu-close-button-container'>
-        <button class='menu-close-button icon-cross'></button>
-      </div>
-      <div class='menu-item-container'><a class="menu-item" data-content="projects" href="#">Projects</a></div>
-      <div class='menu-item-container'><a class="menu-item" data-content="skills" href="#">Skills</a></div>
-      <div class='menu-item-container'><a class="menu-item" data-content="about" href="#">About</a></div>
-    </div>
-  </header>
+    <nav class="menu">
+      <a class="menu-item selected" data-content="projects" href="#">Projects</a>
+      <a class="menu-item" data-content="skills" href="#">Skills</a>
+      <a class="menu-item" data-content="about" href="#">About</a>
+    </nav> 
+  </header> 
   <main>
-    <div class="slideshow">
-      <div class="dots">
-        <span class="dot" onclick="switchCodeSampleView(1)"></span>
-        <span class="dot" onclick="switchCodeSampleView(2)"></span>
-        <span class="dot" onclick="switchCodeSampleView(3)"></span>
-      </div>
-    </div>
-    <section id="projects" class="tab-content">
-    </section>
-    <section id="skills" class="tab-content">
+    <section id="projects" class="tab-content"></section>
+    <section id="skills" class="tab-content hidden">
       <ul class="skills-list">
         <li>HTML</li>
         <li>CSS</li>
@@ -66,24 +57,24 @@
         <li>F#</li>
       </ul>
     </section>
-    <section id="about" class="tab-content">
+    <section id="about" class="tab-content hidden">
       Hi! I'm Nathan Harrenstein. I'm from Bellevue, Washington and I learned to program with C# as a side hobby and now I find myself programming more and more. I am also a cellist. I have been playing the cello for 25 years and hold two degrees including a master's degree in cello performance. 
     </section>
   </main>
-  <footer class="clearfix">
-    <h5 class="copyright">© Nathan Harrenstein</h5>
+  <footer class="clearfix">  
     <div class="social">
       <a class="social-link icon-github" href="https://github.com/nharren"></a>
       <a class="social-link icon-linkedin" href="https://www.linkedin.com/in/nathan-harrenstein-558435bb/"></a>
       <a class="social-link icon-twitter" href="https://twitter.com/nharrenstein"></a>
       <a class="social-link icon-facebook2" href="https://www.facebook.com/nathan.harrenstein"></a>
     </div>
+    <h5 class="copyright">© Nathan Harrenstein</h5>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/models.js"></script> 
-  <script src="js/view.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="vendor/scripts/jquery-3.2.1.min.js"></script>
+  <script src="vendor/scripts/handlebars-v4.0.10.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/models.js"></script> 
+  <script src="scripts/view.js"></script>
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

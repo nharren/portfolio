@@ -1,0 +1,29 @@
+@media (min-width: 640px) {
+  .selected {
+    color: darkblue;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.expanded {
+  margin: -0.9em 0 0.9em 0;
+}
+
+.expanded:after {
+  content: '\1F891';
+}
+
+.collapsed:after {
+  content: '\1F893';
+}
+
+.opened {
+  color: darkblue;
+}
+
+.stretched {
+  flex: 1;
+}
