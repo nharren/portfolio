@@ -1,6 +1,6 @@
 @media (min-width: 640px) {
   .selected {
-    color: darkblue;
+    color: cornflowerblue;
   }
 }
 
@@ -21,7 +21,7 @@
 }
 
 .opened {
-  color: darkblue;
+  color: cornflowerblue;
 }
 
 .stretched {
@@ -29,9 +29,11 @@
 }
 
 .slideLeft {
+  position: absolute;
   left: 100vw;
 }
 
 .slideRight {
+  position: absolute;
   left: -100vw;
 }

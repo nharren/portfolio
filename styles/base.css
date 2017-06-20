@@ -1,6 +1,7 @@
 html {
-  background: #f5fafa;
+  background-color: #f5fafa;
   overflow-x: hidden;
+  color: black;
 }
 
 body {
@@ -11,13 +12,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, div {
-  color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: lightskyblue;
+  color: inherit;
 }
 
 @font-face {

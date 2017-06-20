@@ -1,21 +1,17 @@
 header {
   padding: 40px; 
   background: #d7e8f4;
-  font-family: sans-serif;
   border-bottom: 1px;
-  border-style: solid;
-  border-color: #c3ddef;
   flex: none;
 }
 
 main {
   flex: 1;
+  position: relative;
 }
 
 footer {
   padding: 15px 30px;
   background: #d7e8f4;
   border-top: 1px;
-  border-style: solid;
-  border-color: #c3ddef;
 }

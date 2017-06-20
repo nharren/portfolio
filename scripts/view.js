@@ -4,7 +4,6 @@ var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
-    $('.tab-content').removeClass('slideLeft slideRight');
     $('.tab-content').removeAttr('style');
 
     var $previousTab = $('.selected');
@@ -33,7 +32,9 @@ projectView.handleMainNav = function() {
         $previousTabContent.addClass('hidden');
       });
 
-      $newTabContent.animate({left: '0'});
+      $newTabContent.animate({left: '0'}, function(){
+        $newTabContent.removeClass('slideLeft slideRight');
+      });
     } else {
       $previousTabContent.addClass('hidden');
     }
@@ -56,6 +57,10 @@ projectView.setTeasers = function() {
 };
 
 projectView.init = function() {
+  if (Date.now.getHours > 17) {
+    $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', 'styles/themes/dark.css') );
+  }
+
   Project.all.forEach(function(project){
     $('#projects').append(project.toHtml());
   });
