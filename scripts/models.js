@@ -30,7 +30,7 @@ Project.fetchAll = function() {
     Project.loadAll(projectsData);
     projectView.init();
   }, function(err) {
-    console.error('my stuff broke:', err);
+    console.error('Error:', err);
   })
 }
 

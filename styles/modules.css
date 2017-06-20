@@ -59,7 +59,6 @@
   padding: 2vw;
   position: absolute;
   display: inline-block;
-  transition: left 0.25s linear 0s;
 }
 
 #projects {

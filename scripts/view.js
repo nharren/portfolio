@@ -22,17 +22,14 @@ projectView.handleMainNav = function() {
 
     if ($newTab.index() > $previousTab.index()) {
       $newTabContent.addClass('slideLeft');
-      left = '-200%';
+      left = '-100vw';
     } else {
       $newTabContent.addClass('slideRight');
-      left = '200%';
+      left = '100vw';
     }
 
-    $previousTabContent.animate({left: left}, {
-      queue: false,
-      complete: function() {
-        $previousTabContent.addClass('hidden');
-      }
+    $previousTabContent.animate({left: left}, '1s', function() {
+      $previousTabContent.addClass('hidden');
     });
 
     $newTabContent.animate({left: '0'});

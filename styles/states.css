@@ -29,9 +29,9 @@
 }
 
 .slideLeft {
-  left: 100%;
+  left: 100vw;
 }
 
 .slideRight {
-  left: -100%;
+  left: -100vw;
 }
