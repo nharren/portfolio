@@ -54,8 +54,15 @@
   }
 }
 
+.tab-content {
+  width: 96vw;
+  padding: 2vw;
+  position: absolute;
+  display: inline-block;
+  transition: left 0.25s linear 0s;
+}
+
 #projects {
-  padding: 30px 15px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -125,7 +132,6 @@
 }
 
 #skills, #about {
-  padding: 30px;
   font-size: 1.25em;
   line-height: 1.5em;
 }

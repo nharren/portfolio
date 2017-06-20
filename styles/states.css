@@ -27,3 +27,11 @@
 .stretched {
   flex: 1;
 }
+
+.slideLeft {
+  left: 100%;
+}
+
+.slideRight {
+  left: -100%;
+}
