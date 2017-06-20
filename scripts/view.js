@@ -4,16 +4,39 @@ var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
+    $('.tab-content').removeClass('slideLeft slideRight');
+    $('.tab-content').removeAttr('style');
+
     var $previousTab = $('.selected');
-    var $previousTabContent = $('#' + $previousTab.data('content'));
     var $newTab = $(this);
+
+    var $previousTabContent = $('#' + $previousTab.data('content'));
     var $newTabContent = $('#' + $newTab.data('content'))
 
     $previousTab.removeClass('selected');
     $newTab.addClass('selected');
 
-    $previousTabContent.addClass('hidden');
     $newTabContent.removeClass('hidden');
+
+    if (window.innerWidth > 640) {
+      var left;
+
+      if ($newTab.index() > $previousTab.index()) {
+        $newTabContent.addClass('slideLeft');
+        left = '-100vw';
+      } else {
+        $newTabContent.addClass('slideRight');
+        left = '100vw';
+      }
+
+      $previousTabContent.animate({left: left}, '1s', function() {
+        $previousTabContent.addClass('hidden');
+      });
+
+      $newTabContent.animate({left: '0'});
+    } else {
+      $previousTabContent.addClass('hidden');
+    }
   });
 };
 
@@ -32,7 +55,11 @@ projectView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+projectView.init = function() {
+  Project.all.forEach(function(project){
+    $('#projects').append(project.toHtml());
+  });
+
   projectView.setTeasers();
   projectView.handleMainNav();
-});
+};
