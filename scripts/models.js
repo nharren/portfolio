@@ -1,12 +1,12 @@
 'use strict';
 
-var projects = [];
-
 function Project(projectData) {
   for (var property in projectData) {
     this[property] = projectData[property];
   }
 }
+
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var template = $('#project-template').html();
@@ -14,14 +14,25 @@ Project.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-projectsData.sort(function(a,b) {
-  return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
-});
+Project.loadAll = function(projectsData) {
+  projectsData.sort(function(a,b) {
+    return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
+  });
 
-projectsData.forEach(function(projectData){
-  projects.push(new Project(projectData));
-});
+  projectsData.forEach(function(projectData){
+    Project.all.push(new Project(projectData));
+  });
+}
 
-projects.forEach(function(project){
-  $('#projects').append(project.toHtml());
-});
+Project.fetchAll = function() {
+  $.getJSON('../data/data.json')
+  .then(function(projectsData){
+    Project.loadAll(projectsData);
+    projectView.init();
+  }, function(err) {
+    console.error('my stuff broke:', err);
+  })
+}
+
+
+

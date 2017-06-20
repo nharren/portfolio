@@ -29,7 +29,7 @@ projectView.handleMainNav = function() {
     }
 
     $previousTabContent.animate({left: left}, {
-      queue: false, 
+      queue: false,
       complete: function() {
         $previousTabContent.addClass('hidden');
       }
@@ -54,7 +54,11 @@ projectView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+projectView.init = function() {
+  Project.all.forEach(function(project){
+    $('#projects').append(project.toHtml());
+  });
+
   projectView.setTeasers();
   projectView.handleMainNav();
-});
+};
