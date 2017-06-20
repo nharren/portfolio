@@ -18,21 +18,25 @@ projectView.handleMainNav = function() {
 
     $newTabContent.removeClass('hidden');
 
-    var left;
+    if (window.innerWidth > 640) {
+      var left;
 
-    if ($newTab.index() > $previousTab.index()) {
-      $newTabContent.addClass('slideLeft');
-      left = '-100vw';
+      if ($newTab.index() > $previousTab.index()) {
+        $newTabContent.addClass('slideLeft');
+        left = '-100vw';
+      } else {
+        $newTabContent.addClass('slideRight');
+        left = '100vw';
+      }
+
+      $previousTabContent.animate({left: left}, '1s', function() {
+        $previousTabContent.addClass('hidden');
+      });
+
+      $newTabContent.animate({left: '0'});
     } else {
-      $newTabContent.addClass('slideRight');
-      left = '100vw';
-    }
-
-    $previousTabContent.animate({left: left}, '1s', function() {
       $previousTabContent.addClass('hidden');
-    });
-
-    $newTabContent.animate({left: '0'});
+    }
   });
 };
 
