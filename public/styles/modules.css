@@ -1,3 +1,8 @@
+.border {
+  border-color: #c3ddef;
+  border-style: solid;
+}
+
 .title {
   font-size: 2em;
   float: left;
@@ -5,7 +10,6 @@
 }
 
 .icon-menu {
-  color: black;
   width: auto;
   float: right;
   font-size: 1.5em;
@@ -37,7 +41,6 @@
 }
 
 .menu-item {
-  color: black;
   font-size: 2em;
   text-decoration: none;
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,8 +60,12 @@
 .tab-content {
   width: 96vw;
   padding: 2vw;
-  position: absolute;
+  position: relative;
   display: inline-block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #projects {
@@ -88,17 +95,13 @@
   background-color: #d7e8f4;
   background-size: cover;
   background-position: center;
-  border-color: #c3ddef;
-  border-style: solid;
   border-width: 1px 1px 0 1px;
 }
 
 .project-details {
   display: none;
-  background: #ebf3fa;
+  background-color: #ebf3fa;
   padding: 0.75em 0 1.25em 0;
-  border-color: #c3ddef;
-  border-style: solid;
   border-width: 0 1px;
   text-align: center;
 }
@@ -111,8 +114,6 @@
   display: block;
   background-color: #d7e8f4;
   text-align: center;
-  border-color: #c3ddef;
-  border-style: solid;
   border-width: 1px;
 }
 
@@ -120,14 +121,12 @@
   font-size: 1.25em;
   padding-top: 0.75em;
   padding-bottom: 0.5em;
-  color: black;
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .project-title-arrow {
   font-size: 1.5em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #aed1ea;
 }
 
 #skills, #about {
@@ -152,6 +151,22 @@
   }
 }
 
+.footer-left span {
+  float:left;
+  line-height:1.5em;
+  padding-right: 5px;
+}
+
+.footer-left-separator {
+  position: relative;
+  color: #adceeb;
+  bottom: 0.1em;
+}
+
+.icon-contrast {
+  cursor: pointer;
+}
+
 .social {
   float: right;
 }
@@ -165,7 +180,6 @@
 }
 
 .social-link {
-  color: black;
   padding: 0.5em;
   font-size: 1.25em;
 }

@@ -4,7 +4,6 @@ var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
-    $('.tab-content').removeClass('slideLeft slideRight');
     $('.tab-content').removeAttr('style');
 
     var $previousTab = $('.selected');
@@ -33,7 +32,9 @@ projectView.handleMainNav = function() {
         $previousTabContent.addClass('hidden');
       });
 
-      $newTabContent.animate({left: '0'});
+      $newTabContent.animate({left: '0'}, function(){
+        $newTabContent.removeClass('slideLeft slideRight');
+      });
     } else {
       $previousTabContent.addClass('hidden');
     }
@@ -55,11 +56,31 @@ projectView.setTeasers = function() {
   });
 };
 
-projectView.init = function() {
+projectView.setTheme = function() {
+  var darkTheme = $('<link rel="stylesheet" href="styles/themes/dark.css">');
+  if (new Date().getHours() > 17) {
+    $('head').append(darkTheme);
+  }
+
+  $('.icon-contrast').on('click', function() {
+    let $foundDarkTheme = $('link[href="styles/themes/dark.css"]');
+    if ($foundDarkTheme.length) {
+      $foundDarkTheme.remove();
+    } else {
+      $('head').append(darkTheme);
+    }
+  })
+};
+
+projectView.addProjects = function() {
   Project.all.forEach(function(project){
     $('#projects').append(project.toHtml());
   });
+}
 
+projectView.init = function() {
+  projectView.setTheme();
   projectView.setTeasers();
   projectView.handleMainNav();
+  projectView.addProjects();
 };

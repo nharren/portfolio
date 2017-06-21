@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+html {
+  color: #ccc;
+}
+
+html, .project-display, .project-details {
+  background-color: #2c323a;
+}
+
+h1, h2, h3, h4, h5, div, .title, .menu-item, .copyright, .project-title {
+  font-family: 'Inconsolata', monospace;
+}
+
+header, footer, .menu, .project-header {
+  background-color: #21252B;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.footer-left span {
+  padding-right: 0px;
+}
+
+.footer-left-separator {
+  position: static;
+  color:#666;
+}
+
+.border {
+  border-color: #16191d;
+}
+
+@media (min-width: 640px) {
+  .selected {
+    color: lightcoral;
+  }
+}
+
+.opened {
+  color: lightcoral;
+}
+

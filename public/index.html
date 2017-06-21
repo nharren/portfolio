@@ -16,13 +16,13 @@
   <script id="project-template" type="text/x-handlebars-template">
     <div class="project">
       <a class="project-link" href="{{link}}">
-        <div class="project-display" style="background-image: url('{{image}}')"></div>
+        <div class="project-display border" style="background-image: url('{{image}}')"></div>
       </a>
-      <div class="project-details">          
+      <div class="project-details border">          
         <p>{{description}}</p>
         <p>{{date}}</p>
       </div>
-      <a class="project-header">
+      <a class="project-header border">
         <p class="project-title">{{title}}</p>
         <p class="project-title-arrow collapsed"></p>       
       </a>
@@ -30,7 +30,7 @@
   </script>
 </head>
 <body>
-  <header class="clearfix">
+  <header class="clearfix border">
     <h1 class="title">Nathan Harrenstein</h1>
     <a class="icon-menu"></a>
     <nav class="menu">
@@ -61,14 +61,18 @@
       Hi! I'm Nathan Harrenstein. I'm from Bellevue, Washington and I learned to program with C# as a side hobby and now I find myself programming more and more. I am also a cellist. I have been playing the cello for 25 years and hold two degrees including a master's degree in cello performance. 
     </section>
   </main>
-  <footer class="clearfix">  
+  <footer class="clearfix border">  
     <div class="social">
       <a class="social-link icon-github" href="https://github.com/nharren"></a>
       <a class="social-link icon-linkedin" href="https://www.linkedin.com/in/nathan-harrenstein-558435bb/"></a>
       <a class="social-link icon-twitter" href="https://twitter.com/nharrenstein"></a>
       <a class="social-link icon-facebook2" href="https://www.facebook.com/nathan.harrenstein"></a>
     </div>
-    <h5 class="copyright">© Nathan Harrenstein</h5>
+    <div class="footer-left">
+      <span class="copyright" style="float:left;">© Nathan Harrenstein</span>
+      <span class="footer-left-separator">&nbsp;|&nbsp;</span>
+      <span class="icon-contrast"></span>
+    </div>
   </footer>
   <script src="vendor/scripts/jquery-3.2.1.min.js"></script>
   <script src="vendor/scripts/handlebars-v4.0.10.js"></script>
