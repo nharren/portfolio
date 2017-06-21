@@ -20,6 +20,15 @@ header, footer, .menu, .project-header {
   text-decoration: underline;
 }
 
+.footer-left span {
+  padding-right: 0px;
+}
+
+.footer-left-separator {
+  position: static;
+  color:#666;
+}
+
 .border {
   border-color: #16191d;
 }
@@ -33,3 +42,4 @@ header, footer, .menu, .project-header {
 .opened {
   color: lightcoral;
 }
+

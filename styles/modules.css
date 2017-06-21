@@ -151,6 +151,22 @@
   }
 }
 
+.footer-left span {
+  float:left;
+  line-height:1.5em;
+  padding-right: 5px;
+}
+
+.footer-left-separator {
+  position: relative;
+  color: #adceeb;
+  bottom: 0.1em;
+}
+
+.icon-contrast {
+  cursor: pointer;
+}
+
 .social {
   float: right;
 }
