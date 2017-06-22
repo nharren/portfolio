@@ -4,10 +4,14 @@ var projectView = {};
 
 projectView.handleMainNav = function() {
   $('.menu-item').on('click', function(){
-    $('.tab-content').removeAttr('style');
+    if ($(this).hasClass('selected')) {
+      return;
+    }
 
-    var $previousTab = $('.selected');
+    $('.tab-content').removeAttr('style');
+    
     var $newTab = $(this);
+    var $previousTab = $('.selected');
 
     var $previousTabContent = $('#' + $previousTab.data('content'));
     var $newTabContent = $('#' + $newTab.data('content'))
