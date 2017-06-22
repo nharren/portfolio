@@ -75,14 +75,22 @@
 
 .project {
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
   margin: 15px;
   vertical-align: top;
 }
 
 @media (min-width: 640px) {
   .project {
-    max-width: 300px
+    min-width: 250px;
+    width: 30vw;
+    max-width: 500px;
+    
+  }
+  .project-display {
+    min-height: 150px;
+    height: 20vw;
+    max-height: 275px;
   }
 }
 
@@ -91,7 +99,7 @@
 }
 
 .project-display {
-  height: 12.5em;
+  min-height: 12.5em;
   background-color: #d7e8f4;
   background-size: cover;
   background-position: center;
