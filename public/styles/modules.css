@@ -73,6 +73,19 @@
   flex-wrap: wrap;
 }
 
+.projects-filter-container {
+  width: 100%;
+}
+
+.projects-skill-filter {
+  float: right;
+  min-width: 100px;
+  max-width: 200px;
+  margin-right: 15px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
 .project {
   flex: 1;
   min-width: 250px;

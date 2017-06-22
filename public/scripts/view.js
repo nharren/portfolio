@@ -76,6 +76,36 @@ projectView.setTheme = function() {
   })
 };
 
+projectView.populateSkillFilter = function() {
+  var $skillFilter = $('.projects-skill-filter');
+  var skills = [];
+  Project.all.forEach(function(project) {
+    skills = skills.concat(project.skills);
+  });
+
+  skills.forEach(function(skill) {
+    $skillFilter.append($(`<option value="${skill}">${skill}</option>`));
+  });
+}
+
+projectView.handleSkillFilter = function() {
+  $('.projects-skill-filter').on('change', function() {
+    var skill = $(this).val();
+    if (skill) {
+      $('.project').hide();
+      $('.project').each(function() {
+        $(this).find('.project-skill').get().forEach(s => {
+          if (s.innerText.includes(skill)) {
+            $(this).fadeIn();
+          }
+        });
+      });
+    } else {
+      $('.project').fadeIn();
+    }
+  });
+}
+
 projectView.addProjects = function() {
   Project.all.forEach(function(project){
     $('#projects').append(project.toHtml());
@@ -87,4 +117,6 @@ projectView.init = function() {
   projectView.setTeasers();
   projectView.handleMainNav();
   projectView.addProjects();
+  projectView.populateSkillFilter();
+  projectView.handleSkillFilter();
 };

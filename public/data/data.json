@@ -4,7 +4,7 @@
     "link": "https://github.com/nharren/MusicTimeline",
     "date": "2015",
     "image": "images/MusicTimeline.jpg",
-    "skills": ["C#", "WPF", "ASP.NET", "ASP.NET Web Api 2", "SQL", "SQL Server"],
+    "skills": ["C#", "WPF", "ASP.NET", "ASP.NET Web Api 2", "SQL", "SQL Server", "Entity Framework"],
     "description": "An interactive timeline for discovering and learning about music."
   },
   {

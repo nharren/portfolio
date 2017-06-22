@@ -8,6 +8,11 @@ body {
   min-width: 409px;
 }
 
+* {
+  outline-color: lightcoral;
+  box-shadow: none;
+}
+
 html, .project-display, .project-details {
   background-color: #2c323a;
 }
@@ -16,12 +21,26 @@ h1, h2, h3, h4, h5, div, .title, .menu-item, .copyright, .project-title {
   font-family: 'Inconsolata', monospace;
 }
 
-header, footer, .menu, .project-header {
+header, footer, .menu, .project-header, .projects-skill-filter {
   background-color: #21252B;
 }
 
 .menu-item:hover {
   text-decoration: underline;
+}
+
+.projects-filter-container {
+  border: transparent;
+}
+
+.projects-skill-filter {
+  color: inherit;
+  border: 1px solid #16191d;
+}
+
+.project-skill {
+  padding: 5px 8px;
+  font-size: 1em;
 }
 
 .footer-left span {
