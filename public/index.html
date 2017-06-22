@@ -21,6 +21,9 @@
       <div class="project-details border">          
         <p>{{description}}</p>
         <p>{{date}}</p>
+        {{#each skills}}
+          <span class="project-skill">{{this}}</span>
+        {{/each}}
       </div>
       <a class="project-header border">
         <p class="project-title">{{title}}</p>

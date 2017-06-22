@@ -118,6 +118,16 @@
   margin: 0.5em;
 }
 
+.project-skill {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 0.8em;
+  display: inline-block;
+  margin: 3px;
+  color: white;
+}
+
 .project-header {
   display: block;
   background-color: #d7e8f4;
