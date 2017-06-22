@@ -4,6 +4,10 @@ html {
   color: #ccc;
 }
 
+body {
+  min-width: 409px;
+}
+
 html, .project-display, .project-details {
   background-color: #2c323a;
 }

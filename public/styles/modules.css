@@ -146,17 +146,27 @@
   list-style: disc inside;
 }
 
+#about {
+  text-align: center; 
+  padding-top: 5vh;
+}
+
+.about-image {
+  width: 20vh; 
+  border-radius: 100%; 
+  clear: both; 
+  margin: 0 auto;
+}
+
+.about-text { 
+  width: 80vw;
+  padding-top: 3vh;
+  margin: 0 auto;
+}
+
 .copyright {
   float: left;
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-@media (max-width:488px) {
-  .copyright {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
 }
 
 .footer-left span {
@@ -165,10 +175,24 @@
   padding-right: 5px;
 }
 
+@media (max-width:488px) {
+  .footer-left span {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
 .footer-left-separator {
   position: relative;
   color: #adceeb;
   bottom: 0.1em;
+}
+
+@media (max-width:488px) {
+  .footer-left-separator {
+    display: none;
+  }
 }
 
 .icon-contrast {
