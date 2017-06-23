@@ -181,6 +181,7 @@
   background-color: #d7e8f4;
   text-align: center;
   border-width: 1px;
+  cursor: pointer;
 }
 
 .project-title {
