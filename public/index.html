@@ -19,11 +19,12 @@
         <div class="project-display border" style="background-image: url('{{image}}')"></div>
       </a>
       <div class="project-details border">          
-        <p>{{description}}</p>
-        <p>{{date}}</p>
-        {{#each technologies}}
-          <span class="project-technology">{{this}}</span>
-        {{/each}}
+        <p class="project-description">{{description}}</p>
+        <div class="proejct-technologies">      
+          {{#each technologies}}
+            <span class="project-technology">{{this}}</span>
+          {{/each}}
+        </div>
       </div>
       <a class="project-header border">
         <p class="project-title">{{title}}</p>

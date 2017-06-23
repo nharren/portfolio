@@ -2,7 +2,6 @@
   {
     "title": "Music Timeline",
     "link": "https://github.com/nharren/MusicTimeline",
-    "date": "2015",
     "image": "images/MusicTimeline.jpg",
     "technologies": ["C#", "WPF", "ASP.NET", "ASP.NET Web Api 2", "SQL", "SQL Server", "Entity Framework"],
     "description": "An interactive timeline for discovering and learning about music."
@@ -10,7 +9,6 @@
   {
     "title": "Math Grapher",
     "link": "https://github.com/nharren/MathGrapher",
-    "date": "2016",
     "image": "images/MathGrapher.gif",
     "technologies": ["C#", "WPF"],
     "description": "A math grapher control with animation capabilities for WPF."
@@ -18,7 +16,6 @@
   {
     "title": "Music Trivia",
     "link": "https://github.com/nharren/nharren.github.io",
-    "date": "2016",
     "image": "images/MusicTrivia.jpg",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "description": "A music trivia website."
@@ -26,7 +23,6 @@
   {
     "title": "Harrenstein",
     "link": "https://github.com/nharren/harrenstein",
-    "date": "2016",
     "image": "images/Harrenstein.jpg",
     "technologies": ["HTML", "CSS", "JavaScript", "Audio.js"],
     "description": "My initial website."
@@ -34,7 +30,6 @@
   {
     "title": "Portfolio",
     "link": "https://github.com/nharren/301-portfolio",
-    "date": "2017",
     "image": "",
     "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "Handlebars.js", "Node.js"],
     "description": "This website."
