@@ -76,26 +76,36 @@ projectView.setTheme = function() {
   })
 };
 
-projectView.populateSkillFilter = function() {
-  var $skillFilter = $('.projects-skill-filter');
-  var skills = [];
+projectView.populateFilter = function() {
+  var $filter = $('.filter-dropdown');
+  var technologies = [];
   Project.all.forEach(function(project) {
-    skills = skills.concat(project.skills);
+    project.technologies.forEach(function(technology) {
+      technologies.push(technology);
+    });
   });
 
-  skills.forEach(function(skill) {
-    $skillFilter.append($(`<option value="${skill}">${skill}</option>`));
+  technologies.sort();
+  technologies = new Set(technologies);
+
+  technologies.forEach(function(technology) {
+    $filter.append($(`<div class="filter-item">${technology}</div>`));
   });
 }
 
-projectView.handleSkillFilter = function() {
-  $('.projects-skill-filter').on('change', function() {
-    var skill = $(this).val();
-    if (skill) {
+projectView.handleFilter = function() {
+  $('.filter-selection').on('click', function() {
+    $('.filter-dropdown').slideToggle(200);
+  });
+
+  $('.filter-item').on('mousedown', function(){
+    $('.filter-dropdown').toggle();
+    var technology = $(this).get(0).innerText;
+    if (!technology.startsWith('--')) {
       $('.project').hide();
       $('.project').each(function() {
-        $(this).find('.project-skill').get().forEach(s => {
-          if (s.innerText.includes(skill)) {
+        $(this).find('.project-technology').get().forEach(s => {
+          if (s.innerText.includes(technology)) {
             $(this).fadeIn();
           }
         });
@@ -103,6 +113,8 @@ projectView.handleSkillFilter = function() {
     } else {
       $('.project').fadeIn();
     }
+
+    $('.filter-selection').text(technology);
   });
 }
 
@@ -117,6 +129,6 @@ projectView.init = function() {
   projectView.setTeasers();
   projectView.handleMainNav();
   projectView.addProjects();
-  projectView.populateSkillFilter();
-  projectView.handleSkillFilter();
+  projectView.populateFilter();
+  projectView.handleFilter();
 };

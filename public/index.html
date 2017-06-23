@@ -21,8 +21,8 @@
       <div class="project-details border">          
         <p>{{description}}</p>
         <p>{{date}}</p>
-        {{#each skills}}
-          <span class="project-skill">{{this}}</span>
+        {{#each technologies}}
+          <span class="project-technology">{{this}}</span>
         {{/each}}
       </div>
       <a class="project-header border">
@@ -38,36 +38,22 @@
     <a class="icon-menu"></a>
     <nav class="menu">
       <a class="menu-item selected" data-content="projects" href="#">Projects</a>
-      <a class="menu-item" data-content="skills" href="#">Skills</a>
       <a class="menu-item" data-content="about" href="#">About</a>
     </nav> 
   </header> 
   <main>
     <section id="projects" class="tab-content">
-      <div class="projects-filter-container">
-        <select class="projects-skill-filter">
-          <option value="">-- Filter by Skill --</option>
-        </select>
+      <div class="filter-container">
+        <div class="filter">
+          <div class="filter-selection">-- Technology --</div>
+          <div class="filter-dropdown">
+            <div class="filter-item">-- Technology --</div>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="skills" class="tab-content hidden">
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>SQL</li>
-        <li>Handlebars</li>
-        <li>C#</li>
-        <li>WPF</li>
-        <li>WCF Data Services</li>
-        <li>WinForms</li>
-        <li>ASP.NET Web Api 2</li>
-        <li>F#</li>
-      </ul>
-    </section>
     <section id="about" class="tab-content hidden">
-      <img class="about-image" src="images/profile-crop.jpg">
+      <img class="about-image" src="images/Profile.jpg">
       <p class="about-text">Hi! I'm Nathan Harrenstein. I'm from Bellevue, Washington and I learned to program with C# as a side hobby and now I find myself programming more and more. I am also a cellist. I have been playing the cello for 25 years and hold two degrees including a master's degree in cello performance.</p> 
     </section>
   </main>
