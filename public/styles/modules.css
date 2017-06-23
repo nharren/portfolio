@@ -101,6 +101,7 @@
   border: 1px solid #c3ddef;
   width: 250px;
   left: -1px; /* Offsets border width */
+  box-shadow: 3px 3px 5px grey;
 }
 
 .filter-item {
