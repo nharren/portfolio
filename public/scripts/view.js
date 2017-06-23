@@ -76,6 +76,48 @@ projectView.setTheme = function() {
   })
 };
 
+projectView.populateFilter = function() {
+  var $filter = $('.filter-dropdown');
+  var technologies = [];
+  Project.all.forEach(function(project) {
+    project.technologies.forEach(function(technology) {
+      technologies.push(technology);
+    });
+  });
+
+  technologies.sort();
+  technologies = new Set(technologies);
+
+  technologies.forEach(function(technology) {
+    $filter.append($(`<div class="filter-item">${technology}</div>`));
+  });
+}
+
+projectView.handleFilter = function() {
+  $('.filter-selection').on('click', function() {
+    $('.filter-dropdown').slideToggle(200);
+  });
+
+  $('.filter-item').on('mousedown', function(){
+    $('.filter-dropdown').toggle();
+    var technology = $(this).get(0).innerText;
+    if (!technology.startsWith('--')) {
+      $('.project').hide();
+      $('.project').each(function() {
+        $(this).find('.project-technology').get().forEach(s => {
+          if (s.innerText.includes(technology)) {
+            $(this).fadeIn();
+          }
+        });
+      });
+    } else {
+      $('.project').fadeIn();
+    }
+
+    $('.filter-selection').text(technology);
+  });
+}
+
 projectView.addProjects = function() {
   Project.all.forEach(function(project){
     $('#projects').append(project.toHtml());
@@ -87,4 +129,6 @@ projectView.init = function() {
   projectView.setTeasers();
   projectView.handleMainNav();
   projectView.addProjects();
+  projectView.populateFilter();
+  projectView.handleFilter();
 };
