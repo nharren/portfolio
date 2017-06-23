@@ -9,7 +9,7 @@ projectView.handleMainNav = function() {
     }
 
     $('.tab-content').removeAttr('style');
-    
+
     var $newTab = $(this);
     var $previousTab = $('.selected');
 

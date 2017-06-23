@@ -101,6 +101,7 @@
   border: 1px solid #c3ddef;
   width: 250px;
   left: -1px; /* Offsets border width */
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 .filter-item {
@@ -181,6 +182,7 @@
   background-color: #d7e8f4;
   text-align: center;
   border-width: 1px;
+  cursor: pointer;
 }
 
 .project-title {
