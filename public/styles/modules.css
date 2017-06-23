@@ -149,7 +149,7 @@
 .project-details {
   display: none;
   background-color: #ebf3fa;
-  padding: 0.75em 0 1.25em 0;
+  padding: 0.75em 0;
   border-width: 0 1px;
   text-align: center;
 }
@@ -158,14 +158,22 @@
   margin: 0.5em;
 }
 
+.project-description {
+  padding-bottom: 5px;
+}
+
+.project-technologies {
+  padding: 0 3px;
+}
+
 .project-technology {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  padding: 5px;
   font-size: 0.8em;
   display: inline-block;
   margin: 3px;
   color: white;
+  padding: 5px;
 }
 
 .project-header {
@@ -199,6 +207,7 @@
 #about {
   text-align: center; 
   padding-top: 5vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-image {
