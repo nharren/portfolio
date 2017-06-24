@@ -3,7 +3,7 @@
 var projectView = {};
 
 projectView.handleMainNav = function() {
-  $('.menu-item').on('click', function(){
+  $('.menu-item').on('click', function() {
     if ($(this).hasClass('selected')) {
       return;
     }
@@ -41,6 +41,10 @@ projectView.handleMainNav = function() {
       });
     } else {
       $previousTabContent.addClass('hidden');
+    }
+
+    if ($newTab.data('content') === 'snake') {
+      snake.initialize();
     }
   });
 };
