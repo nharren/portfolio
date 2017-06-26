@@ -20,7 +20,7 @@
       </a>
       <div class="project-details border">          
         <p class="project-description">{{description}}</p>
-        <div class="proejct-technologies">      
+        <div class="project-technologies">      
           {{#each technologies}}
             <span class="project-technology">{{this}}</span>
           {{/each}}
@@ -38,8 +38,8 @@
     <h1 class="title">Nathan Harrenstein</h1>
     <a class="icon-menu"></a>
     <nav class="menu">
-      <a class="menu-item selected" data-content="projects" href="#">Projects</a>
-      <a class="menu-item" data-content="about" href="#">About</a>
+      <a class="menu-item selected" data-content="projects" href="/">Projects</a>
+      <a class="menu-item" data-content="about" href="/about">About</a>
     </nav> 
   </header> 
   <main>
@@ -73,11 +73,11 @@
   </footer>
   <script src="vendor/scripts/jquery-3.2.1.min.js"></script>
   <script src="vendor/scripts/handlebars-v4.0.10.js"></script>
-  <script src="scripts/models.js"></script> 
-  <script src="scripts/view.js"></script>
-  <script src="scripts/scripts.js"></script>
-  <script>
-    app.Project.fetchAll();
-  </script>
+  <script src="vendor/scripts/page.js"></script>
+  <script src="scripts/models/models.js"></script> 
+  <script src="scripts/views/view.js"></script>
+  <script src="scripts/controllers/projectsController.js"></script>
+  <script src="scripts/controllers/aboutController.js"></script>
+  <script src="scripts/controllers/routes.js"></script>
 </body>
 </html>
