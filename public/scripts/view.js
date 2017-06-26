@@ -92,7 +92,10 @@ var app = app || {};
     technologies = new Set(technologies);
 
     technologies.forEach(function(technology) {
-      $filter.append($(`<div class="filter-item">${technology}</div>`));
+      let technologyCount = app.Project.all.map(p => p.technologies)
+                                           .filter(p => p.includes(technology))
+                                           .reduce(acc => acc + 1,0);
+      $filter.append($(`<div class="filter-item" data-technology="${technology}">${technology} (${technologyCount})</div>`));
     });
   }
 
@@ -103,8 +106,8 @@ var app = app || {};
 
     $('.filter-item').on('mousedown', function(){
       $('.filter-dropdown').toggle();
-      var technology = $(this).get(0).innerText;
-      if (!technology.startsWith('--')) {
+      var technology = $(this).data('technology');
+      if ($(this).index() !== 0) {
         $('.project').hide();
         $('.project').each(function() {
           $(this).find('.project-technology').get().forEach(s => {
