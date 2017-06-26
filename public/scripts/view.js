@@ -45,6 +45,8 @@ projectView.handleMainNav = function() {
 
     if ($newTab.data('content') === 'snake') {
       snake.initialize();
+    } else {
+      // TODO: Dispose snake when not in use.
     }
   });
 };

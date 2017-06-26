@@ -1,16 +1,15 @@
 var snake = {};
 
-snake.scale = 5;
-snake.cellCountX = 30;
-snake.cellCountY = 30;
+snake.blocksX = 30;
+snake.blocksY = 30;
 snake.foodCount = 4;
 snake.initialSize = 3;
 
 snake.points = [];
 snake.food = [];
 snake.$board;
-snake.boardWidth;
-snake.boardHeight;
+snake.width;
+snake.height;
 snake.cellWidth;
 snake.cellHeight;
 snake.timer;
@@ -29,39 +28,45 @@ snake.initialize = function() {
 };
 
 snake.handleKeyboard = function() {
-  $(window).on('keydown', function(event) {
-    switch (event.which) {
-    case 38: /* Up */
-    case 87: /* W */
-      snake.direction = 'up';
-      break;
-    case 39: /* Right */
-    case 68: /* D */
-      snake.direction = 'right';
-      break;
-    case 40: /* Down */
-    case 83: /* S */
-      snake.direction = 'down';
-      break;
-    case 37: /* Left */
-    case 65: /* A */
-      snake.direction = 'left';
-      break;
-    default:
-      break;
-    }
-  })
+  $(window).on('keydown', snake.handleKeyDown);
 };
 
+snake.handleKeyDown = function(event) {
+  switch (event.which) {
+  case 38: /* Up */
+  case 87: /* W */
+    snake.direction = 'up';
+    snake.moveSnake();
+    break;
+  case 39: /* Right */
+  case 68: /* D */
+    snake.direction = 'right';
+    snake.moveSnake();
+    break;
+  case 40: /* Down */
+  case 83: /* S */
+    snake.direction = 'down';
+    snake.moveSnake();
+    break;
+  case 37: /* Left */
+  case 65: /* A */
+    snake.direction = 'left';
+    snake.moveSnake();
+    break;
+  default:
+    break;
+  }
+}
+
 snake.getBoard = function() {
-  snake.$board = $('#snake');
+  snake.$board = $('.snake-board');
 };
 
 snake.measureBoard = function() {
-  snake.boardWidth = snake.$board.width();
-  snake.boardHeight = window.innerHeight - $('header').outerHeight() - $('footer').outerHeight();
-  snake.cellWidth = snake.boardWidth / snake.cellCountX;
-  snake.cellHeight = snake.boardHeight / snake.cellCountY;
+  snake.width = snake.$board.width();
+  snake.height = snake.$board.height();
+  snake.cellWidth = snake.width / snake.blocksX;
+  snake.cellHeight = snake.height / snake.blocksY;
 };
 
 snake.resetSnake = function() {
@@ -82,8 +87,8 @@ snake.updateFood = function() {
     let notValid = true;
 
     while (notValid) {
-      let newFoodX = Math.floor(Math.random() * snake.cellCountX);
-      let newFoodY = Math.floor(Math.random() * snake.cellCountY);
+      let newFoodX = Math.floor(Math.random() * snake.blocksX);
+      let newFoodY = Math.floor(Math.random() * snake.blocksY);
       newFoodPoint = [newFoodX, newFoodY];
       notValid = snake.food.some(e => e === newFoodPoint);
       notValid = notValid && snake.points.some(e => e === newFoodPoint);
@@ -119,8 +124,14 @@ snake.drawFood = function() {
 snake.drawFoodBlock = function(point) {
   let x = point[0] * snake.cellWidth;
   let y = point[1] * snake.cellHeight;
-  let block = $('<div class="snake-food"></div>');
-  block.attr('style',`position: absolute; top: ${y}px; left: ${x}px; width: ${snake.cellWidth}px; height: ${snake.cellHeight}px; background-color: white;`);
+  let block = $('<div></div>');
+  block.addClass('snake-food');
+  block.css('position', 'absolute');
+  block.css('top', `${y}px;`);
+  block.css('left', `${x}px`);
+  block.css('width', `${snake.cellWidth}px`); 
+  block.css('height', `${snake.cellHeight}px`); 
+  block.css('background-color', 'white');
   block.attr('data-position', `${point[0]},${point[1]}`);
   snake.$board.append(block);
 }
@@ -175,8 +186,8 @@ snake.calculateNewPoint = function() {
 }
 
 snake.hasBarrier = function(point) {
-  let hitWallX = point[0] < 0 || point[0] > snake.cellCountX - 1;
-  let hitWallY = point[1] < 0 || point[1] > snake.cellCountY - 1;
+  let hitWallX = point[0] < 0 || point[0] > snake.blocksX - 1;
+  let hitWallY = point[1] < 0 || point[1] > snake.blocksY - 1;
   let hitSelf = snake.points.some(p => p === point);
 
   return hitWallX || hitWallY || hitSelf;
@@ -184,6 +195,7 @@ snake.hasBarrier = function(point) {
 
 snake.endGame = function() {
   snake.stopSnake();
+  $(window).off('keydown');
 }
 
 snake.stopSnake = function() {
@@ -196,6 +208,7 @@ snake.checkForFood = function(point) {
     snake.food = snake.food.filter(f => f[0] !== point[0] && f[1] !== point[1]);
     snake.isGrowing = true;
     $(`.snake-food[data-position="${point[0]},${point[1]}"]`).remove();
+    console.log('ate food at ' + onFood.toString());
     snake.updateFood();
     snake.drawFoodBlock(snake.food[snake.food.length - 1]);
   }

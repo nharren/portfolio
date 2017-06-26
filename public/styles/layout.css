@@ -6,6 +6,7 @@ header {
 }
 
 main {
+  display: flex;
   flex: 1;
   position: relative;
 }

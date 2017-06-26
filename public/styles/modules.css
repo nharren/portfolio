@@ -206,6 +206,19 @@
   list-style: disc inside;
 }
 
+#snake {
+  flex: 1;
+  display: flex;
+  padding: 0;
+}
+
+
+.snake-board {
+  flex: 1;
+  margin: 0 auto;
+  background: grey;
+}
+
 #about {
   text-align: center; 
   padding-top: 5vh;
