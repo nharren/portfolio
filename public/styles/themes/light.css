@@ -1,0 +1,52 @@
+html {
+  background-color: #f5fafa;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, div, .project-title-arrow, #about {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header, footer, .filter, .filter-dropdown, .project-display, .project-header, .menu {
+  background-color: #d7e8f4;
+}
+
+.border, .filter, .filter-dropdown {
+  border: 1px solid #c3ddef;
+}
+
+.title, .menu-item, .copyright, .project-title {
+  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .menu {
+    background-color: transparent;
+  }
+}
+
+.filter-dropdown {
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+.filter-item:hover {
+  background-color: cornflowerblue;
+}
+
+.project-details {
+  background-color: #ebf3fa;
+}
+
+.project-technology {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.footer-left-separator {
+  color: #adceeb;
+}

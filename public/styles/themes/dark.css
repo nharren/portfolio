@@ -5,12 +5,16 @@
   box-shadow: none;
 }
 
-html, .project-technology {
+html, .project-technology, a, .project-technology {
   color: #ccc;
 }
 
 body {
   min-width: 409px;
+}
+
+a {
+  text-decoration: none;
 }
 
 html, .project-details, .filter-item:hover {
@@ -35,12 +39,23 @@ header, footer, .menu, .project-display, .project-header, .filter, .filter-dropd
 
 .filter {
   color: inherit;
-  border: 1px solid #16191d;
+}
+
+.filter-dropdown {
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+.project-title-arrow, #about {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .project-technology {
   padding: 5px 8px;
   font-size: 1em;
+}
+
+.project-technology {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .footer-left span {
@@ -52,8 +67,8 @@ header, footer, .menu, .project-display, .project-header, .filter, .filter-dropd
   color:#666;
 }
 
-.border, .filter-dropdown {
-  border-color: #16191d;
+.border, .filter, .filter-dropdown {
+  border: 1px solid #16191d;
 }
 
 @media (min-width: 640px) {
