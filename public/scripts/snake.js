@@ -60,6 +60,8 @@ snake.handleKeyDown = function(event) {
 
 snake.getBoard = function() {
   snake.$board = $('.snake-board');
+  console.log(snake.$board.height());
+  snake.$board.width(snake.$board.height());
 };
 
 snake.measureBoard = function() {
