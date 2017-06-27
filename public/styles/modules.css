@@ -184,6 +184,17 @@
   list-style: disc inside;
 }
 
+#snake {
+  padding: 0;
+}
+
+.snake-board {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background: grey;
+}
+
 #about {
   text-align: center; 
   padding-top: 5vh;
