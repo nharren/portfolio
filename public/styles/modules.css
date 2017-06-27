@@ -185,15 +185,13 @@
 }
 
 #snake {
-  flex: 1;
-  display: flex;
   padding: 0;
 }
 
-
 .snake-board {
-  flex: 1;
+  height: 100%;
   margin: 0 auto;
+  position: relative;
   background: grey;
 }
 
