@@ -44,6 +44,10 @@ var app = app || {};
     } else {
       previousTabContent.addClass('hidden');
     }
+
+    if (newTab.data('content') === 'snake') {
+      app.snake.initialize();
+    }
   }
 
   projectView.setTeasers = function() {
