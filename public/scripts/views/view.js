@@ -47,6 +47,8 @@ var app = app || {};
 
     if (newTab.data('content') === 'snake') {
       app.snake.initialize();
+    } else if (app.snake.initialized) {
+      app.snake.dispose();
     }
   }
 

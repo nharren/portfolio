@@ -34,19 +34,18 @@ var app = app || {};
     updateFood();
     drawSnake();
     drawFood();
-    snake.start();
+    snakeTimer = window.setInterval(moveSnake, 500);
     resizeTimer = window.setInterval(monitorResize, 100);
     snake.initialized = true;
   };
 
-  snake.start = function() {
-    snakeTimer = window.setInterval(moveSnake, 500);
-  };
+  snake.reset = function() {
+    clear();
+    snake.initialize();
+  }
 
   snake.dispose = function() {
-    window.clearInterval(snakeTimer);
-    window.clearInterval(resizeTimer);
-    snake.initialized = false;
+    clear();
   }
 
   let getBoard = function() {
@@ -248,6 +247,24 @@ var app = app || {};
       updateFood();
       drawFoodBlock(food[food.length - 1]);
     }
+  }
+
+  let clear = function() {
+    window.clearInterval(snakeTimer);
+    window.clearInterval(resizeTimer);
+    $('.snake-board').empty();
+    points = [];
+    food = [];
+    board = null;
+    width = null;
+    height = null;
+    cellWidth = null;
+    cellHeight = null;
+    resizeTimer = null;
+    snakeTimer = null;
+    direction = 'right';
+    isGrowing = false;
+    snake.initialized = false;
   }
 
   module.snake = snake;
