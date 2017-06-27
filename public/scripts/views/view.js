@@ -5,48 +5,46 @@ var app = app || {};
 (function(module) {
   var projectView = {};
 
-  projectView.handleMainNav = function() {
-    $('.menu-item').on('click', function(){
-      if ($(this).hasClass('selected')) {
-        return;
-      }
+  projectView.showPage = function(section) {
+    let newTab = $(`.menu-item[data-content="${section}"]`);
+    var previousTab = $('.selected');
 
-      $('.tab-content').removeAttr('style');
+    if (newTab.hasClass('selected')) {
+      return;
+    }
 
-      var $newTab = $(this);
-      var $previousTab = $('.selected');
+    $('.tab-content').removeAttr('style');
 
-      var $previousTabContent = $('#' + $previousTab.data('content'));
-      var $newTabContent = $('#' + $newTab.data('content'))
+    var previousTabContent = $('#' + previousTab.data('content'));
+    var newTabContent = $('#' + section)
 
-      $previousTab.removeClass('selected');
-      $newTab.addClass('selected');
+    previousTab.removeClass('selected');
+    newTab.addClass('selected');
 
-      $newTabContent.removeClass('hidden');
+    newTabContent.removeClass('hidden');
 
-      if (window.innerWidth > 640) {
-        var left;
+    if (window.innerWidth > 640) {
+      var left;
 
-        if ($newTab.index() > $previousTab.index()) {
-          $newTabContent.addClass('slideLeft');
-          left = '-100vw';
-        } else {
-          $newTabContent.addClass('slideRight');
-          left = '100vw';
-        }
-
-        $previousTabContent.animate({left: left}, '1s', function() {
-          $previousTabContent.addClass('hidden');
-        });
-
-        $newTabContent.animate({left: '0'}, function(){
-          $newTabContent.removeClass('slideLeft slideRight');
-        });
+      if (newTab.index() > previousTab.index()) {
+        newTabContent.addClass('slideLeft');
+        left = '-100vw';
       } else {
-        $previousTabContent.addClass('hidden');
+        newTabContent.addClass('slideRight');
+        left = '100vw';
       }
-    });
-  };
+
+      previousTabContent.animate({left: left}, '1s', function() {
+        previousTabContent.addClass('hidden');
+      });
+
+      newTabContent.animate({left: '0'}, function(){
+        newTabContent.removeClass('slideLeft slideRight');
+      });
+    } else {
+      previousTabContent.addClass('hidden');
+    }
+  }
 
   projectView.setTeasers = function() {
     $('.project-details').hide();
@@ -159,7 +157,6 @@ var app = app || {};
   projectView.init = function() {
     projectView.setTheme();
     projectView.setTeasers();
-    projectView.handleMainNav();
     projectView.addProjects();
     projectView.populateFilter();
     projectView.handleFilter();

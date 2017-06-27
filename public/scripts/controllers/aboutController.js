@@ -6,8 +6,7 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.showPage = () => {
-    $('section').hide();
-    $('#about').fadeIn(150);
+    app.projectView.showPage('about');
   }
 
   module.aboutController = aboutController;
