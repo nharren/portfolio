@@ -9,10 +9,6 @@ html, .project-technology, a, .project-technology {
   color: #ccc;
 }
 
-h1, h2, h3, h4, h5, div, .project-title-arrow, #about {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
   min-width: 409px;
 }
@@ -47,6 +43,10 @@ header, footer, .menu, .project-display, .project-header, .filter, .filter-dropd
 
 .filter-dropdown {
   box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+.project-title-arrow, #about {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .project-technology {
