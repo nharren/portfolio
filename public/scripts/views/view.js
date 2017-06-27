@@ -64,17 +64,21 @@ var app = app || {};
   };
 
   projectView.setTheme = function() {
+    var lightTheme = $('<link rel="stylesheet" href="styles/themes/light.css">');
     var darkTheme = $('<link rel="stylesheet" href="styles/themes/dark.css">');
-    if (new Date().getHours() > 17) {
-      $('head').append(darkTheme);
-    }
+    
+    let currentHour = new Date().getHours();
+    let theme = currentHour > 7 && currentHour < 17 ? lightTheme : darkTheme;
+    
+    $('head').append(theme);
 
     $('.icon-contrast').on('click', function() {
-      let $foundDarkTheme = $('link[href="styles/themes/dark.css"]');
-      if ($foundDarkTheme.length) {
-        $foundDarkTheme.remove();
+      let foundTheme = $('link[href^="styles/themes/"]');
+
+      if (foundTheme.attr('href').endsWith('dark.css')) {
+        foundTheme.attr('href', 'styles/themes/light.css');
       } else {
-        $('head').append(darkTheme);
+        foundTheme.attr('href', 'styles/themes/dark.css');
       }
     })
   };
