@@ -3,7 +3,7 @@ html {
   color: black;
 }
 
-h1, h2, h3, h4, h5, div {
+h1, h2, h3, h4, h5, div, .project-title-arrow, #about {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,7 +20,7 @@ header, footer, .filter, .filter-dropdown, .project-display, .project-header, .m
   border: 1px solid #c3ddef;
 }
 
-.title, .menu-item, .copyright {
+.title, .menu-item, .copyright, .project-title {
   font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -45,14 +45,6 @@ header, footer, .filter, .filter-dropdown, .project-display, .project-header, .m
 .project-technology {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-}
-
-.project-title {
-  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.project-title-arrow, #about {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-left-separator {

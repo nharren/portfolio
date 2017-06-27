@@ -63,6 +63,12 @@
 #projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around; 
+}
+
+#projects:after {
+  content: "";
+  flex: auto;
 }
 
 .filter-container {
@@ -101,7 +107,6 @@
 }
 
 .project {
-  flex: 1;
   flex-basis: 100%;
   min-width: 250px;
   margin: 15px;
@@ -110,14 +115,8 @@
 
 @media (min-width: 640px) {
   .project {
-    min-width: 250px;
-    width: 30vw;
-    max-width: 400px;   
-  }
-  .project-display {
-    min-height: 150px;
-    height: 20vw;
-    max-height: 250px;
+    min-width: 250px; 
+    max-width: 450px; 
   }
 }
 
@@ -208,8 +207,8 @@
 }
 
 .footer-left span {
-  float:left;
-  line-height:1.5em;
+  float: left;
+  line-height: 1.5em;
   padding-right: 5px;
 }
 
