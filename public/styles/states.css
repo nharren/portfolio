@@ -13,11 +13,11 @@
 }
 
 .expanded:after {
-  content: '\1F891';
+  content: '🢑';
 }
 
 .collapsed:after {
-  content: '\1F893';
+  content: '🢓';
 }
 
 .opened {

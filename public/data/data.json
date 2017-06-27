@@ -2,28 +2,35 @@
   {
     "title": "Music Timeline",
     "link": "https://github.com/nharren/MusicTimeline",
-    "image": "images/MusicTimeline.jpg",
+    "image": "images/music-timeline.jpg",
     "technologies": ["C#", "WPF", "ASP.NET", "ASP.NET Web Api 2", "SQL", "SQL Server", "Entity Framework"],
     "description": "An interactive timeline for discovering and learning about music."
   },
   {
     "title": "Math Grapher",
     "link": "https://github.com/nharren/MathGrapher",
-    "image": "images/MathGrapher.gif",
+    "image": "images/math-grapher.gif",
     "technologies": ["C#", "WPF"],
     "description": "A math grapher control with animation capabilities for WPF."
   },
   {
     "title": "Music Trivia",
     "link": "https://github.com/nharren/nharren.github.io",
-    "image": "images/MusicTrivia.jpg",
+    "image": "images/music-trivia.jpg",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "description": "A music trivia website."
   },
   {
+    "title": "Abellio Strings",
+    "link": "https://github.com/nharren/harrenstein",
+    "image": "images/abellio-strings.jpg",
+    "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "Handlebars.js"],
+    "description": "A website for Abellio Strings."
+  },
+  {
     "title": "Harrenstein",
     "link": "https://github.com/nharren/harrenstein",
-    "image": "images/Harrenstein.jpg",
+    "image": "images/harrenstein.jpg",
     "technologies": ["HTML", "CSS", "JavaScript", "Audio.js"],
     "description": "My initial website."
   },

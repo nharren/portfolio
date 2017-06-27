@@ -1,6 +1,5 @@
 header {
   padding: 40px; 
-  background: #d7e8f4;
   border-bottom: 1px;
   flex: none;
 }
@@ -12,6 +11,5 @@ main {
 
 footer {
   padding: 15px 30px;
-  background: #d7e8f4;
   border-top: 1px;
 }

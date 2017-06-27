@@ -4,9 +4,7 @@ var app = app || {};
 
 (function(module) {
   function Project(projectData) {
-    for (var property in projectData) {
-      this[property] = projectData[property];
-    }
+    Object.keys(projectData).forEach(k => this[k] = projectData[k]);
   }
 
   Project.all = [];

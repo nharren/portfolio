@@ -1,12 +1,6 @@
-.border {
-  border-color: #c3ddef;
-  border-style: solid;
-}
-
 .title {
   font-size: 2em;
   float: left;
-  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .icon-menu {
@@ -25,7 +19,6 @@
 .menu {
   display: none;
   clear: both;
-  background-color: #d7e8f4;
   line-height: 2em;
   padding: 30px 0;
 }
@@ -43,7 +36,6 @@
 .menu-item {
   font-size: 2em;
   text-decoration: none;
-  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px 0px;
   display: block;
 }
@@ -71,6 +63,12 @@
 #projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around; 
+}
+
+#projects:after {
+  content: "";
+  flex: auto;
 }
 
 .filter-container {
@@ -84,8 +82,6 @@
   text-align: left;
   margin: 10px 15px;
   border-radius: 3px;
-  background: #d7e8f4;
-  border: 1px solid #c3ddef;
   cursor: pointer;
 }
 
@@ -97,11 +93,8 @@
 .filter-dropdown {
   display: none;
   position: absolute;
-  background-color: #d7e8f4; 
-  border: 1px solid #c3ddef;
   width: 250px;
   left: -1px; /* Offsets border width */
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 .filter-item {
@@ -111,11 +104,9 @@
 
 .filter-item:hover {
   cursor: pointer;
-  background-color: cornflowerblue;
 }
 
 .project {
-  flex: 1;
   flex-basis: 100%;
   min-width: 250px;
   margin: 15px;
@@ -124,14 +115,8 @@
 
 @media (min-width: 640px) {
   .project {
-    min-width: 250px;
-    width: 30vw;
-    max-width: 400px;   
-  }
-  .project-display {
-    min-height: 150px;
-    height: 20vw;
-    max-height: 250px;
+    min-width: 250px; 
+    max-width: 450px; 
   }
 }
 
@@ -141,7 +126,6 @@
 
 .project-display {
   min-height: 12.5em;
-  background-color: #d7e8f4;
   background-size: cover;
   background-position: center;
   border-width: 1px 1px 0 1px;
@@ -149,7 +133,6 @@
 
 .project-details {
   display: none;
-  background-color: #ebf3fa;
   padding: 0.75em 0;
   border-width: 0 1px;
   text-align: center;
@@ -168,18 +151,15 @@
 }
 
 .project-technology {
-  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   font-size: 0.8em;
   display: inline-block;
   margin: 3px;
-  color: white;
   padding: 5px;
 }
 
 .project-header {
   display: block;
-  background-color: #d7e8f4;
   text-align: center;
   border-width: 1px;
   cursor: pointer;
@@ -189,12 +169,10 @@
   font-size: 1.25em;
   padding-top: 0.75em;
   padding-bottom: 0.5em;
-  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .project-title-arrow {
   font-size: 1.5em;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #technologies, #about {
@@ -209,7 +187,6 @@
 #about {
   text-align: center; 
   padding-top: 5vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-image {
@@ -227,12 +204,11 @@
 
 .copyright {
   float: left;
-  font-family: 'Roboto Condensed', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-left span {
-  float:left;
-  line-height:1.5em;
+  float: left;
+  line-height: 1.5em;
   padding-right: 5px;
 }
 
@@ -246,7 +222,6 @@
 
 .footer-left-separator {
   position: relative;
-  color: #adceeb;
   bottom: 0.1em;
 }
 
