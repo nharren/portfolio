@@ -191,7 +191,7 @@ var app = app || {};
 
   let calculateNewPoint = function() {
     let lastPoint = points[points.length - 1];
-    let newPoint = [];
+    let newPoint;
 
     switch (direction) {
     case 'up':

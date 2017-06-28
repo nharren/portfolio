@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="styles/states.css">
   <script id="project-template" type="text/x-handlebars-template">
     <div class="project">
-      <a class="project-link" href="{{link}}">
+      <a class="project-link" href="{{url}}">
         <div class="project-display border" style="background-image: url('{{image}}')"></div>
       </a>
       <div class="project-details border">          
@@ -79,8 +79,12 @@
   <script src="/vendor/scripts/jquery-3.2.1.min.js"></script>
   <script src="/vendor/scripts/handlebars-v4.0.10.js"></script>
   <script src="/vendor/scripts/page.js"></script>
-  <script src="/scripts/models/models.js"></script> 
+  <script src="/scripts/models/project.js"></script>
+  <script src="/scripts/models/githubToken.js"></script> 
   <script src="/scripts/views/view.js"></script>
+  <script src="/scripts/views/projectsView.js"></script>
+  <script src="/scripts/views/snakeView.js"></script>
+  <script src="/scripts/views/aboutView.js"></script>
   <script src="/scripts/controllers/snake.js"></script>
   <script src="/scripts/controllers/projectsController.js"></script>
   <script src="/scripts/controllers/snakeController.js"></script>

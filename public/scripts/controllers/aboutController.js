@@ -6,7 +6,13 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.showPage = () => {
-    app.projectView.showPage('about');
+    app.view.init();
+    
+    if (app.snake.initialized) {
+      app.snake.dispose();
+    }
+
+    app.aboutView.showPage();
   }
 
   module.aboutController = aboutController;
