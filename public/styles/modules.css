@@ -62,17 +62,13 @@
 
 #projects {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; 
-}
-
-#projects:after {
-  content: "";
-  flex: auto;
+  flex-flow: row wrap;
+  align-content: flex-start;
 }
 
 .filter-container {
   width: 100%;
+  display: inline-block;
 }
 
 .filter {
@@ -107,15 +103,16 @@
 }
 
 .project {
-  flex-basis: 100%;
+  display: inline-block;
   min-width: 250px;
   margin: 15px;
-  vertical-align: top;
+  flex: 1;
 }
 
 @media (min-width: 640px) {
   .project {
-    min-width: 250px; 
+    min-width: 350px;
+    /*width: 550px;*/
     max-width: 450px; 
   }
 }

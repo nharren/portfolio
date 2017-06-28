@@ -9,7 +9,7 @@ var app = app || {};
   snake.blocksY = 30;
   snake.foodCount = 4;
   snake.initialSize = 3;
-  snake.debug = false;
+  snake.debug = true;
   snake.initialized = false;
 
   let points = [];
@@ -114,6 +114,7 @@ var app = app || {};
 
   let updateFood = function() {
     let foodToAdd = snake.foodCount - food.length;
+    if (snake.dubug) console.log('Current food count: '+ food.length);
 
     for (var i = 0; i < foodToAdd; i++) {
       let newFoodPoint;
@@ -123,8 +124,7 @@ var app = app || {};
         let newFoodX = Math.floor(Math.random() * snake.blocksX);
         let newFoodY = Math.floor(Math.random() * snake.blocksY);
         newFoodPoint = [newFoodX, newFoodY];
-        notValid = food.some(e => e[0] === newFoodPoint[0] && e[1] === newFoodPoint[1]);
-        notValid = notValid && points.some(e => e[0] === newFoodPoint[0] && e[1] === newFoodPoint[1]);
+        notValid = food.some(e => e.equals(newFoodPoint)) || points.some(e => e.equals(newFoodPoint));
       }
 
       food.push(newFoodPoint);
@@ -217,7 +217,7 @@ var app = app || {};
   let hasBarrier = function(point) {
     let hitWallX = point[0] < 0 || point[0] > snake.blocksX - 1;
     let hitWallY = point[1] < 0 || point[1] > snake.blocksY - 1;
-    let hitSelf = points.some(p => p[0] === point[0] && p[1] === point[1]);
+    let hitSelf = points.some(p => p.equals(point));
 
     if (snake.debug) {
       if (hitWallX) console.log('Hit left or right wall at ' + point);
@@ -238,9 +238,10 @@ var app = app || {};
   }
 
   let checkForFood = function(point) {
-    let onFood = food.filter(f => f[0] === point[0] && f[1] === point[1]);
-    if (onFood.length) {
-      food = food.filter(f => f[0] !== point[0] && f[1] !== point[1]);
+    let onFood = food.filter(f => f.equals(point));
+
+    if (onFood.length > 0) {
+      food = food.filter(f => !f.equals(point));
       isGrowing = true;
       $(`.snake-food[data-position="${point[0]},${point[1]}"]`).remove();
       if (snake.debug) console.log('Food eaten at ' + onFood.toString());
@@ -248,6 +249,29 @@ var app = app || {};
       drawFoodBlock(food[food.length - 1]);
     }
   }
+
+  Array.prototype.equals = function (array) {
+    if (!array) {
+      return false;
+    }
+
+    if (this.length !== array.length) {
+      return false;
+    }
+
+    for (var i = 0, l=this.length; i < l; i++) {
+      if (Array.isArray(this[i]) && Array.isArray(array[i])) {
+        if (!this[i].equals(array[i]))
+          return false;
+      }           
+      else if (this[i] !== array[i]) {
+        return false;
+      }           
+    }       
+    return true;
+  }
+
+  Object.defineProperty(Array.prototype, 'equals', {enumerable: false});
 
   let clear = function() {
     window.clearInterval(snakeTimer);
