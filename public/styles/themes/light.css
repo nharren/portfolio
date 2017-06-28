@@ -47,6 +47,19 @@ header, footer, .filter, .filter-dropdown, .project-display, .project-header, .m
   color: white;
 }
 
+.snake-board {
+  background-color: #d7e8f4;
+    border: 1px solid rgba(0,0,0,0.75);
+}
+
+.snake-food {
+  background-color: cornflowerblue;
+}
+
+.snake {
+  background-color: rgba(0,0,0,0.75);
+}
+
 .footer-left-separator {
   color: #adceeb;
 }

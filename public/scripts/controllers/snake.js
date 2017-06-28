@@ -142,7 +142,7 @@ var app = app || {};
   };
 
   let drawSnakeBlock = function(point) {
-    drawBlock(point, 'snake', 'black');
+    drawBlock(point, 'snake');
   }
 
   let drawFood = function() {
@@ -153,10 +153,10 @@ var app = app || {};
   };
 
   let drawFoodBlock = function(point) {
-    drawBlock(point, 'snake-food', 'white');
+    drawBlock(point, 'snake-food');
   }
 
-  let drawBlock = function(point, className, color) {
+  let drawBlock = function(point, className) {
     let x = point[0] * cellWidth;
     let y = point[1] * cellHeight;
     let block = $('<div></div>');
@@ -166,7 +166,6 @@ var app = app || {};
     block.css('left', `${x}px`);
     block.css('width', `${cellWidth}px`);
     block.css('height', `${cellHeight}px`);
-    block.css('background-color', color);
     block.attr('data-position', `${point[0]},${point[1]}`);
     board.append(block);
   }

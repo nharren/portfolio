@@ -58,6 +58,19 @@ header, footer, .menu, .project-display, .project-header, .filter, .filter-dropd
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.snake-board {
+  background-color: #21252B;
+  border: 1px solid rgba(255,255,255,0.75);
+}
+
+.snake-food {
+  background-color: lightcoral;
+}
+
+.snake {
+  background-color: rgba(255,255,255,0.75);
+}
+
 .footer-left span {
   padding-right: 0px;
 }
