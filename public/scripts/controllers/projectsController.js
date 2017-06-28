@@ -4,9 +4,11 @@ var app = app || {};
 
 (function(module) {
   const projectsController = {};
-  
+
   projectsController.showPage = () => {
-    app.projectView.showPage('projects');
+    app.view.init();
+    app.snake.dispose();
+    app.Project.fetchAll(app.projectsView.init);
   }
 
   module.projectsController = projectsController;

@@ -6,7 +6,9 @@ var app = app || {};
   const snakeController = {};
 
   snakeController.showPage = () => {
-    app.projectView.showPage('snake');
+    app.view.init();
+    app.snakeView.showPage();
+    app.snake.initialize();
   }
 
   module.snakeController = snakeController;
