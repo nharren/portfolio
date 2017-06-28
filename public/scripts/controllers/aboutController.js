@@ -7,11 +7,7 @@ var app = app || {};
 
   aboutController.showPage = () => {
     app.view.init();
-    
-    if (app.snake.initialized) {
-      app.snake.dispose();
-    }
-
+    app.snake.dispose();
     app.aboutView.showPage();
   }
 

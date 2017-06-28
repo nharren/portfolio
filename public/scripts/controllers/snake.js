@@ -45,7 +45,9 @@ var app = app || {};
   }
 
   snake.dispose = function() {
-    clear();
+    if (snake.initialized) {
+      clear();
+    }
   }
 
   let getBoard = function() {
@@ -56,7 +58,7 @@ var app = app || {};
     height = board.innerHeight();
     board.width(board.innerHeight());
     width = height;
-    
+
     cellWidth = width / snake.blocksX;
     cellHeight = height / snake.blocksY;
   };
@@ -176,7 +178,7 @@ var app = app || {};
       let removedPoint = points.shift();
       $(`.snake[data-position="${removedPoint[0]},${removedPoint[1]}"]`).remove();
     }
-    
+
     let newPoint = calculateNewPoint();
 
     if (hasBarrier(newPoint)) {
@@ -263,17 +265,18 @@ var app = app || {};
       if (Array.isArray(this[i]) && Array.isArray(array[i])) {
         if (!this[i].equals(array[i]))
           return false;
-      }           
+      }
       else if (this[i] !== array[i]) {
         return false;
-      }           
-    }       
+      }
+    }
     return true;
   }
 
   Object.defineProperty(Array.prototype, 'equals', {enumerable: false});
 
   let clear = function() {
+    $(window).off('keydown');
     window.clearInterval(snakeTimer);
     window.clearInterval(resizeTimer);
     $('.snake-board').empty();

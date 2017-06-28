@@ -18,6 +18,11 @@ var app = app || {};
   let initView;
 
   Project.fetchAll = function(callback) {
+    if (Project.all.length > 0) {
+      callback();
+      return;
+    }
+
     initView = callback;
     $.getJSON('../../data/data.json').then(processLocalProjectsData, processError);
   }
@@ -53,7 +58,7 @@ var app = app || {};
         project.url = githubRepoData.html_url;
       }
 
-      current++
+      current++;
       if (current === Project.all.length) {
         initView();
         initView = null;

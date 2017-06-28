@@ -51,10 +51,10 @@ var app = app || {};
   view.setTheme = function() {
     var lightTheme = $('<link rel="stylesheet" href="styles/themes/light.css">');
     var darkTheme = $('<link rel="stylesheet" href="styles/themes/dark.css">');
-    
+
     let currentHour = new Date().getHours();
     let theme = currentHour > 7 && currentHour < 17 ? lightTheme : darkTheme;
-    
+
     $('head').append(theme);
 
     $('.icon-contrast').on('click', function() {
@@ -94,7 +94,7 @@ var app = app || {};
     if (view.initialized) {
       return;
     }
-    
+
     view.setTheme();
     view.handleMediaQueries();
     view.initialized = true;
