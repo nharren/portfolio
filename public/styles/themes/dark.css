@@ -9,10 +9,6 @@ html, .project-technology, a, .project-technology {
   color: #ccc;
 }
 
-body {
-  min-width: 409px;
-}
-
 a {
   text-decoration: none;
 }

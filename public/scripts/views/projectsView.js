@@ -85,7 +85,7 @@ var app = app || {};
       projectsView.handleFilter();
       initialized = true;
     }
-  
+
     projectsView.showPage();
   };
 

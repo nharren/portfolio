@@ -2,6 +2,8 @@ header {
   padding: 40px; 
   border-bottom: 1px;
   flex: none;
+  display: flex;
+  align-items: center;
 }
 
 main {
