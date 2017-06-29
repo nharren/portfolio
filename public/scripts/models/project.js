@@ -21,11 +21,25 @@ var app = app || {};
       return;
     }
     
-    $.getJSON('http://nharren.herokuapp.com/project')
+    $.getJSON('./project')
      .then(projectsData => {
        Project.all = projectsData.map(d => new Project(d));
-       callback();
+       fetchTechnologies(callback)
      }, processError);
+  }
+
+  function fetchTechnologies(callback) {
+    $.getJSON('./technology')
+    .then(function(technologyData) {
+      Project.all = Project.all.map(function(project) {
+        project.technologies = project.technologies.map(function(technologyId) {
+          return technologyData.rows.find(r => r.technology_id === technologyId).name;
+        })
+        return project;
+      });
+
+      callback();
+    }, processError);
   }
 
   function processError(error) {
