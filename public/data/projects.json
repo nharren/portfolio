@@ -1,36 +1,36 @@
 [
   {
-    "githubId": 38896896,
+    "github_name": "MusicTimeline",
     "title": "Music Timeline",
     "image": "./images/music-timeline.jpg",
-    "technologies": ["C#", "WPF", "ASP.NET", "ASP.NET Web Api 2", "SQL", "SQL Server", "Entity Framework"]
+    "technologies": ["C-Sharp", "WPF", "ASP.NET", "ASP.NET Web Api 2", "SQL", "SQL Server", "Entity Framework"]
   },
   {
-    "githubId": 61003347,
+    "github_name": "MathGrapher",
     "title": "Math Grapher",
     "image": "./images/math-grapher.gif",
-    "technologies": ["C#", "WPF"]
+    "technologies": ["C-Sharp", "WPF"]
   },
   {
-    "githubId": 92445012,
+    "github_name": "nharren.github.io",
     "title": "Music Trivia",
     "image": "./images/music-trivia.jpg",
     "technologies": ["HTML", "CSS", "JavaScript"]
   },
   {
-    "githubId": 95376371,
+    "github_name": "abellio-strings",
     "title": "Abellio Strings",
     "image": "./images/abellio-strings.jpg",
     "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "Handlebars.js"]
   },
   {
-    "githubId": 92364717,
+    "github_name": "harrenstein",
     "title": "Harrenstein",
     "image": "./images/harrenstein.jpg",
     "technologies": ["HTML", "CSS", "JavaScript", "Audio.js"]
   },
   {
-    "githubId": 94232702,
+    "github_name": "301-portfolio",
     "title": "Portfolio",
     "image": "",
     "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "Handlebars.js", "Node.js"]

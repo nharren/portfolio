@@ -15,55 +15,21 @@ var app = app || {};
     return templateRender(this);
   };
 
-  let initView;
-
   Project.fetchAll = function(callback) {
     if (Project.all.length > 0) {
       callback();
       return;
     }
-
-    initView = callback;
-    $.getJSON('../../data/data.json').then(processLocalProjectsData, processError);
+    
+    $.getJSON('http://nharren.herokuapp.com/projects')
+     .then(projectsData => {
+       Project.all = projectsData.map(d => new Project(d));
+       callback();
+     }, processError);
   }
 
   function processError(error) {
     console.error('Error:', error);
-  }
-
-  function processLocalProjectsData(projectsData) {
-    Project.all = projectsData.map(d => new Project(d));
-
-    $.ajax({
-      method: 'GET',
-      url: 'https://api.github.com/users/nharren/repos',
-      headers: {
-        Authorization: process.env.GITHUB_TOKEN
-      }
-    })
-    .then(processRemoteProjectsData, processError);
-  }
-
-  function processRemoteProjectsData(githubReposData) {
-    let current = 0;
-
-    Project.all.forEach(function(project) {
-      let githubRepoData = githubReposData.filter(d => d.id === project.githubId);
-
-      if (githubRepoData.length === 0) {
-        console.error('Could not find GitHub repo with id ' + project.githubId + '.');
-      } else {
-        githubRepoData = githubRepoData[0];
-        project.description = githubRepoData.description;
-        project.url = githubRepoData.html_url;
-      }
-
-      current++;
-      if (current === Project.all.length) {
-        initView();
-        initView = null;
-      }
-    });
   }
 
   module.Project = Project;
