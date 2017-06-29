@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-{
-  "name": "301-portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nharren/301-portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nharren/301-portfolio/issues"
-  },
-  "homepage": "https://github.com/nharren/301-portfolio#readme",
-  "dependencies": {
-    "express": "^4.15.3"
-  }
-}
-=======
 {
   "name": "301-portfolio",
   "version": "1.0.0",
@@ -48,4 +24,3 @@
     "pg": "^6.4.0"
   }
 }
->>>>>>> class-13
