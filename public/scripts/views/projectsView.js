@@ -5,6 +5,8 @@ var app = app || {};
 (function(module) {
   var projectsView = {};
 
+  let initialized = false;
+
   projectsView.showPage = function() {
     app.view.showPage('projects');
   }
@@ -76,10 +78,14 @@ var app = app || {};
   }
 
   projectsView.init = function() {
-    projectsView.setTeasers();
-    projectsView.addProjects();
-    projectsView.populateFilter();
-    projectsView.handleFilter();
+    if (!initialized) {
+      projectsView.setTeasers();
+      projectsView.addProjects();
+      projectsView.populateFilter();
+      projectsView.handleFilter();
+      initialized = true;
+    }
+  
     projectsView.showPage();
   };
 
