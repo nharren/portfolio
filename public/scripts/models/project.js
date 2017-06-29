@@ -21,7 +21,7 @@ var app = app || {};
       return;
     }
     
-    $.getJSON('http://nharren.herokuapp.com/projects')
+    $.getJSON('http://nharren.herokuapp.com/project')
      .then(projectsData => {
        Project.all = projectsData.map(d => new Project(d));
        callback();
