@@ -38,7 +38,7 @@ var app = app || {};
       method: 'GET',
       url: 'https://api.github.com/users/nharren/repos',
       headers: {
-        Authorization: process.env.GITHUB_TOKEN
+        Authorization: 'token ' + process.env.GITHUB_TOKEN
       }
     })
     .then(processRemoteProjectsData, processError);
