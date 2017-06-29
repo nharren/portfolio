@@ -140,7 +140,7 @@ function processRemoteData(remoteProjectsData) {
 
     if (projectData !== undefined) {
       projectData.description = remoteProjectData.description;
-      projectData.url = remoteProjectData.url;
+      projectData.url = remoteProjectData.html_url;
     }
   })
 
@@ -188,7 +188,7 @@ function buildInsertProjectsQuery() {
 
 function buildInsertProjectQuery(projectData) {
   return `INSERT INTO project(title, image, github_name, description, url) 
-          VALUES('${projectData.title}', '${projectData.image}', '${projectData.github_name}', '${projectData.description}', '${projectData.html_url}') ON CONFLICT DO NOTHING;`;
+          VALUES('${projectData.title}', '${projectData.image}', '${projectData.github_name}', '${projectData.description}', '${projectData.url}') ON CONFLICT DO NOTHING;`;
 }
 
 function insertTechnologies() {
