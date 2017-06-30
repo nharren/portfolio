@@ -118,15 +118,7 @@ function processLocalData(localProjectsData) {
 }
 
 function getRemoteData() {
-  let options = {
-    url: 'https://api.github.com/users/nharren/repos',
-    headers: {
-      'Authorization': `token ${process.env.GITHUB_TOKEN}`,
-      'User-Agent': 'nharren'
-    }
-  }
-
-  request(options, function (error, response, body) {
+  request('/github/users/nharren/repos', function (error, response, body) {
     if (error) processError(error);
 
     let remoteData = JSON.parse(body);
