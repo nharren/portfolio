@@ -19,6 +19,7 @@
   clear: both;
   line-height: 2em;
   padding: 30px 0;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -28,6 +29,7 @@
     float: right;
     background: transparent;
     padding: 0;
+    width: auto;
   }
 }
 
@@ -181,6 +183,7 @@
 
 #snake {
   padding: 0;
+  width: 100vw;
 }
 
 .snake-board {

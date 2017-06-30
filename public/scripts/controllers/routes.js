@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-page('/', app.projectsController.showPage);
+page('/', app.projectsController.loadAll, app.projectsController.showPage);
 page('/snake', app.snakeController.showPage);
 page('/about', app.aboutController.showPage);
 

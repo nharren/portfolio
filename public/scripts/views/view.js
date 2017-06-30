@@ -74,7 +74,11 @@ var app = app || {};
   };
 
   function adjustForLargeScreens(event) {
-    event.matches ? unhandleToggleMenu() : handleToggleMenu();
+    if(event.matches) {
+      unhandleToggleMenu();
+    } else {
+      handleToggleMenu();
+    }
   }
 
   function handleToggleMenu() {

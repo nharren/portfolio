@@ -16,15 +16,15 @@ client.on('error', err => console.error(err));
 app.use(express.static('./public'));
 
 app.get('/', function(request, response) {
-  response.sendFile('./public/index.html', {root: './public'});
+  response.sendFile('./index.html', {root: './public'});
 })
 
 app.get('/snake', function(request, response) {
-  response.sendFile('./public/index.html', {root: './public'});
+  response.sendFile('./index.html', {root: './public'});
 })
 
 app.get('/about', function(request, response) {
-  response.sendFile('./public/index.html', {root: './public'});
+  response.sendFile('./index.html', {root: './public'});
 })
 
 app.get('/project', function(request, response) {

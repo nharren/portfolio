@@ -5,7 +5,7 @@ var app = app || {};
 (function(module) {
   const aboutController = {};
 
-  aboutController.showPage = () => {
+  aboutController.showPage = function() {
     app.view.init();
     app.snake.dispose();
     app.aboutView.showPage();
