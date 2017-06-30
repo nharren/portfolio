@@ -4,6 +4,8 @@ header {
   flex: none;
   display: flex;
   align-items: center;
+  flex-flow: row wrap;
+  align-content: flex-start;
 }
 
 main {
