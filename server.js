@@ -4,7 +4,6 @@ const pg = require('pg');
 const fs = require('fs');
 const request = require('request');
 const express = require('express');
-const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -14,8 +13,6 @@ const client = new pg.Client(connectionString);
 client.connect();
 client.on('error', err => console.error(err));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 app.get('/', function(request, response) {
@@ -88,7 +85,8 @@ function proxyGitHub(request, response) {
   (requestProxy({
     url: `https://api.github.com/${request.params[0]}`,
     headers: {
-      Authorization: `token ${process.env.GITHUB_TOKEN}`
+      'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+      'User-Agent': 'nharren'
     }
   }))(request, response);
 }
@@ -118,7 +116,7 @@ function processLocalData(localProjectsData) {
 }
 
 function getRemoteData() {
-  request('/github/users/nharren/repos', function (error, response, body) {
+  request('http://localhost:' + PORT + '/github/users/nharren/repos', { gzip: true }, function (error, response, body) {
     if (error) processError(error);
 
     let remoteData = JSON.parse(body);
