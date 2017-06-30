@@ -55,9 +55,13 @@ var app = app || {};
   };
 
   let measureBoard = function() {
-    height = board.innerHeight();
-    board.width(board.innerHeight());
-    width = height;
+    let boardSize = Math.min(board.outerHeight() - 3, board.outerWidth() - 3);
+
+    board.height(boardSize);
+    board.width(boardSize);
+
+    height = boardSize;
+    width = boardSize;
 
     cellWidth = width / snake.blocksX;
     cellHeight = height / snake.blocksY;
