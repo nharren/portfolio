@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config()
 const pg = require('pg');
 const fs = require('fs');
 const request = require('request');
@@ -116,7 +117,7 @@ function processLocalData(localProjectsData) {
 }
 
 function getRemoteData() {
-  request('http://localhost:' + PORT + '/github/users/nharren/repos', { gzip: true }, function (error, response, body) {
+  request(`http://${process.env.HOST}/github/users/nharren/repos`, { gzip: true }, function (error, response, body) {
     if (error) processError(error);
 
     let remoteData = JSON.parse(body);
