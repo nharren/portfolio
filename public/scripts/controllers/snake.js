@@ -3,7 +3,7 @@
 var app = app || {};
 
 (function(module) {
-  var snake = {};
+  let snake = {};
 
   snake.blocksX = 30;
   snake.blocksY = 30;
@@ -55,7 +55,12 @@ var app = app || {};
   };
 
   let measureBoard = function() {
-    let boardSize = Math.min(board.outerHeight() - 3, board.outerWidth() - 3);
+    let bt = parseFloat(board.css('borderTopWidth'));
+    let bb = parseFloat(board.css('borderBottomWidth'));
+    let bl = parseFloat(board.css('borderLeftWidth'));
+    let br = parseFloat(board.css('borderRightWidth'));
+
+    let boardSize = Math.min($('main').height() - bt - bb, window.innerWidth - bl - br);
 
     board.height(boardSize);
     board.width(boardSize);
@@ -99,7 +104,7 @@ var app = app || {};
   }
 
   let monitorResize = function() {
-    if ($('.snake-board').innerHeight() !== height) {
+    if ($('main').height() !== height) {
       measureBoard();
       $('.snake').remove();
       drawSnake();

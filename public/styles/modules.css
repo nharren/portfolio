@@ -50,8 +50,7 @@
 }
 
 .tab-content {
-  width: 96vw;
-  padding: 2vw;
+  width: 100%;
   position: relative;
   display: inline-block;
   top: 0;
