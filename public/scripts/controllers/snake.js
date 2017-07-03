@@ -3,10 +3,10 @@
 var app = app || {};
 
 (function(module) {
-  var snake = {};
+  let snake = {}; 
 
-  snake.blocksX = 30;
-  snake.blocksY = 30;
+  snake.blocksX = 25;
+  snake.blocksY = 25;
   snake.foodCount = 4;
   snake.initialSize = 3;
   snake.debug = true;
@@ -15,8 +15,6 @@ var app = app || {};
   let points = [];
   let food = [];
   let board;
-  let width;
-  let height;
   let cellWidth;
   let cellHeight;
   let resizeTimer;
@@ -29,6 +27,8 @@ var app = app || {};
 
     getBoard();
     measureBoard();
+    cellWidth = 100 / snake.blocksX;
+    cellHeight = 100 / snake.blocksY;
     handleKeyboard();
     resetSnake();
     updateFood();
@@ -55,16 +55,15 @@ var app = app || {};
   };
 
   let measureBoard = function() {
-    let boardSize = Math.min(board.outerHeight() - 3, board.outerWidth() - 3);
+    let bt = parseFloat(board.css('borderTopWidth'));
+    let bb = parseFloat(board.css('borderBottomWidth'));
+    let bl = parseFloat(board.css('borderLeftWidth'));
+    let br = parseFloat(board.css('borderRightWidth'));
 
-    board.height(boardSize);
+    let boardSize = Math.round(Math.min($('main').height() - bt - bb, window.innerWidth - bl - br));
+
     board.width(boardSize);
-
-    height = boardSize;
-    width = boardSize;
-
-    cellWidth = width / snake.blocksX;
-    cellHeight = height / snake.blocksY;
+    board.height(boardSize);
   };
 
   let handleKeyboard = function() {
@@ -73,23 +72,23 @@ var app = app || {};
 
   let handleKeyDown = function(event) {
     switch (event.which) {
-    case 38: /* Up */
-    case 87: /* W */
+    case keys.up:
+    case keys.w:
       direction = 'up';
       moveSnake();
       break;
-    case 39: /* Right */
-    case 68: /* D */
+    case keys.right:
+    case keys.d:
       direction = 'right';
       moveSnake();
       break;
-    case 40: /* Down */
-    case 83: /* S */
+    case keys.down:
+    case keys.s:
       direction = 'down';
       moveSnake();
       break;
-    case 37: /* Left */
-    case 65: /* A */
+    case keys.left:
+    case keys.a:
       direction = 'left';
       moveSnake();
       break;
@@ -98,14 +97,19 @@ var app = app || {};
     }
   }
 
+  const keys = {
+    up: 38,
+    down: 40,
+    left: 37,
+    right: 39,
+    w: 87,
+    s: 83,
+    a: 65,
+    d: 68
+  }
+
   let monitorResize = function() {
-    if ($('.snake-board').innerHeight() !== height) {
-      measureBoard();
-      $('.snake').remove();
-      drawSnake();
-      $('.snake-food').remove();
-      drawFood();
-    }
+    measureBoard();
   }
 
   let resetSnake = function() {
@@ -166,10 +170,10 @@ var app = app || {};
     let block = $('<div></div>');
     block.addClass(className);
     block.css('position', 'absolute');
-    block.css('top', `${y}px`);
-    block.css('left', `${x}px`);
-    block.css('width', `${cellWidth}px`);
-    block.css('height', `${cellHeight}px`);
+    block.css('top', `${y}%`);
+    block.css('left', `${x}%`);
+    block.css('width', `${cellWidth}%`);
+    block.css('height', `${cellHeight}%`);
     block.attr('data-position', `${point[0]},${point[1]}`);
     board.append(block);
   }
@@ -264,7 +268,7 @@ var app = app || {};
       return false;
     }
 
-    for (var i = 0, l=this.length; i < l; i++) {
+    for (let i = 0, l=this.length; i < l; i++) {
       if (Array.isArray(this[i]) && Array.isArray(array[i])) {
         if (!this[i].equals(array[i]))
           return false;
@@ -286,8 +290,6 @@ var app = app || {};
     points = [];
     food = [];
     board = null;
-    width = null;
-    height = null;
     cellWidth = null;
     cellHeight = null;
     resizeTimer = null;
