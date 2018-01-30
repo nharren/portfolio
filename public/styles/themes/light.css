@@ -47,7 +47,7 @@ header, footer, .filter, .filter-dropdown, .project-display, .project-header, .m
   color: white;
 }
 
-.snake-board {
+#snake-board {
   background-color: #d7e8f4;
     border: 1px solid rgba(0,0,0,0.75);
 }

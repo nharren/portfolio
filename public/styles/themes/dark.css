@@ -54,7 +54,7 @@ header, footer, .menu, .project-display, .project-header, .filter, .filter-dropd
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.snake-board {
+#snake-board {
   background-color: #21252B;
   border: 1px solid rgba(255,255,255,0.75);
 }

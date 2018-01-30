@@ -184,7 +184,7 @@
   padding: 0;
 }
 
-.snake-board {
+#snake-board {
   margin: 0 auto;
   position: relative;
 }

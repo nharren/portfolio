@@ -1,6 +1,7 @@
 'use strict';
 
-require('dotenv').config()
+require('dotenv').config();
+
 const pg = require('pg');
 const fs = require('fs');
 const request = require('request');
@@ -8,11 +9,11 @@ const express = require('express');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
-
 const connectionString = process.env.DATABASE_URL;
 const client = new pg.Client(connectionString);
+
 client.connect();
-client.on('error', err => console.error(err));
+client.on('error', console.error);
 
 app.use(express.static('./public'));
 
@@ -151,7 +152,7 @@ let createTablesQuery =
     image VARCHAR(255),
     github_name VARCHAR(255) NOT NULL,
     description VARCHAR(255),
-    url VARCHAR(255) UNIQUE NOT NULL
+    url VARCHAR(255) NOT NULL
   );
   
   CREATE TABLE IF NOT EXISTS
@@ -173,8 +174,10 @@ function insertProjects() {
 }
 
 function buildInsertProjectsQuery() {
-  return projectsData.map(buildInsertProjectQuery)
-                     .reduce((acc, cur) => acc + cur);
+  let query = projectsData.map(buildInsertProjectQuery)
+    .reduce((acc, cur) => acc + cur);
+    
+  return query;
 }
 
 function buildInsertProjectQuery(projectData) {
